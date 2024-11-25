@@ -1,0 +1,41 @@
+// Color Variables
+
+// dark theme
+$primary-100: #1F3A5F;
+$primary-200: #4d648d;
+$primary-300: #acc2ef;
+$accent-100: #3D5A80;
+$accent-200: #cee8ff;
+$text-100: #FFFFFF;
+$text-200: #e0e0e0;
+$bg-100: #0F1C2E;
+$bg-200: #1f2b3e;
+$bg-300: #374357;
+
+// box shadow
+$neon-light: 0 4px 30px rgba($bg-300, 0.1),0 4px 30px rgba($bg-300, 0.5), 0 4px 30px rgba($bg-300, 0.5);
+
+
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 16px
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr [center-start] repeat(10, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 1fr;
+    grid-template-rows: 100vh;
+    background-color: $bg-100;
+
+}
