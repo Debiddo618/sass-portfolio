@@ -28,12 +28,14 @@ html {
   font-size: 4rem;
   font-weight: 700;
   color: #FFFFFF;
+  margin-bottom: 1.5rem;
 }
 
 .subtitle {
   font-size: 2rem;
   font-weight: 500;
   color: #cee8ff;
+  margin-bottom: 4.5rem;
 }
 
 .header {
@@ -74,7 +76,7 @@ html {
   margin-bottom: 4.5rem;
 }
 .header__intro-button--1 {
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 .header__pictures {
   display: flex;
@@ -176,16 +178,12 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
 }
-.games__subtitle {
-  margin-bottom: 2.5rem;
-}
-
 .games__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min-content, 50rem));
   align-items: center;
   justify-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 3rem;
 }
 
@@ -214,7 +212,93 @@ html {
   font-weight: 400;
   color: #FFFFFF;
   margin-bottom: 1.5rem;
+  height: 5rem;
 }
 .game-card__link--demo {
   margin-right: 3rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+}
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  grid-template-rows: repeat(2, minmax(min-content, 1fr));
+}
+
+.project__grid--web {
+  grid-row: 1/-1;
+  display: grid;
+  grid-template-rows: 4, 20rem;
+}
+.project__grid--mobile {
+  background-color: blue;
+}
+.project__grid--sass {
+  background-color: orange;
+}
+
+.project-card {
+  margin-bottom: 4.5rem;
+  padding: 0 3rem;
+  align-self: start;
+  position: relative;
+  transition: all 0.5s;
+}
+.project-card--face1 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s;
+  z-index: 10;
+}
+.project-card--face2 {
+  position: absolute;
+  width: 100%;
+  transform: translateY(-25rem);
+  transition: all 0.5s;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+}
+.project-card:hover .project-card--face2 {
+  position: relative;
+  top: 100%;
+  transform: translateY(0);
+  opacity: 1;
+}
+.project-card__image {
+  width: 100%;
+}
+.project-card__title {
+  color: #FFFFFF;
+  font-size: 3.5rem;
+}
+.project-card__skills {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  list-style: none;
+}
+.project-card__description {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+}
+.project-card__links {
+  margin-top: 2rem;
+}
+.project-card__link {
+  margin-top: 2rem;
+}
+.project-card__link--demo {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 3rem;
+}
+.project-card__link--source {
+  text-decoration: none;
+  display: inline-block;
 }/*# sourceMappingURL=main.css.map */

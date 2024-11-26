@@ -4,7 +4,6 @@
 
     &__title{}
     &__subtitle{
-        margin-bottom: $mb-md;
     }
 }
 
@@ -13,7 +12,7 @@
     grid-template-columns: repeat(auto-fit,minmax(min-content, 50rem));
     align-items: center;
     justify-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: $grid-gap;
 }
 
@@ -43,11 +42,12 @@
         font-weight: 400;
         color: $text-100;
         margin-bottom: $mb-sm;
+        height: 5rem;
     }
 
     &__link{
         &--demo{
-            margin-right: 3rem;
+            margin-right: $mr-sm;
         }
     }
 }

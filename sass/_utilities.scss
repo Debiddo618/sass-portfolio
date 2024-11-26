@@ -1,19 +1,22 @@
 // margin bottom
-
 $mb-sm: 1.5rem;
 $mb-md: 2.5rem;
 $mb-lg: 4.5rem;
 
-// title and subtitles
+// margin right
+$mr-sm: 3rem;
 
+// title and subtitles
 .title{
     font-size: $font-heading;
     font-weight: 700;
     color: $text-100;
+    margin-bottom: $mb-sm;
 }
 
 .subtitle{
     font-size: $font-subtitle;
     font-weight: 500;
     color: $accent-200;
+    margin-bottom: $mb-lg;
 }
