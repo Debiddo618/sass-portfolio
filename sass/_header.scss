@@ -4,7 +4,88 @@
     grid-row: 1/2;
 
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: min-content 1fr;
+    gap: $grid-gap;
 
+    & > * {
+        padding: 2rem;
+        margin-top: 7rem;
+    }
+
+    &__hero{
+        color: $color-white;
+    }
+
+    &__intro{
+        position: relative;
+        z-index: 1;
+
+        &--start{
+            font-size: $font-default;
+            margin-bottom: $mb-sm;
+            font-weight: 700;
+        }
+        &--middle{
+            font-size: $font-lg;
+            font-weight: 900;
+            margin-bottom: $mb-sm;
+        }
+        &--end{
+            font-size: $font-sm;
+            line-height: 1.5;
+            font-weight: 500;
+            width: 70%;
+            margin-bottom: $mb-lg;
+
+        }
+
+        &-button{
+            &--1{
+                margin-right: 2rem;
+            }
+            &--2{
+                
+            }
+        }
+    }
+    &__pictures{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__image{
+        z-index: 1;
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: $neon-light;
+        animation: float ease 3s infinite;
+    }
+
+
+}
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.header-background{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    background-image: linear-gradient(to right, rgba($bg-100, .7), rgba($bg-100, .7)), url('../img/trees.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }

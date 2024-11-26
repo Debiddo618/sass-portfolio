@@ -10,32 +10,66 @@
       href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./sass/main.css" />
     <title>David's Portfolio</title>
   </head>
   <body class="container">
+    <div class="header-background"></div>
     <header class="header">
       <nav class="nav">
         <div class="nav__logo">Logo</div>
         <ul class="nav__links">
           <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Experience</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Experience</a>
+          </li>
           <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Games</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
         </ul>
         <div class="nav__buttons">
-          <button class="nav__cta">Get Started</button>
+          <button class="nav__cta btn">Get Started</button>
           <div class="nav__theme-switcher">Dark</div>
         </div>
       </nav>
 
       <div class="header__hero">
         <div class="header__intro">
-          <p></p>
+          <p class="header__intro--start">Hello, I'm David.</p>
+          <p class="header__intro--middle">
+            I'm a Fullstack Developer passionate about building responsive
+            websites and apps.
+          </p>
+          <p class="header__intro--end">
+            With a background in applied mathematics, I'm a software engineer
+            who loves exploring new technologies and creating innovative web
+            designs to bring ideas to life.
+          </p>
+
+          <button class="header__intro-button--1 btn">Get Started</button>
+          <button class="header__intro-button--2 btn">About Me</button>
         </div>
       </div>
+
+      <div class="header__pictures">
+        <img
+          src="img/heroImage.png"
+          alt="Picture of me"
+          class="header__image"
+        />
+      </div>
     </header>
-    <main>main</main>
+    <main class="main">
+      <div class="about">About</div>
+      <div class="experience">Experience</div>
+      <div class="projects">Projects</div>
+      <div class="games">
+        <div class="games__title title">Games</div>
+        <div class="games__subtitle subtitle">Play some games</div>
+        <div class="games__grid"></div>
+      </div>
+    </main>
     <footer class="footer">
       <footer></footer>
     </footer>

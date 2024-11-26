@@ -1,0 +1,53 @@
+.games{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content,1fr));
+
+    &__title{}
+    &__subtitle{
+        margin-bottom: $mb-md;
+    }
+}
+
+.games__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min-content, 50rem));
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: $grid-gap;
+}
+
+.game-card{
+    width: 50rem;
+    background-color: $bg-200;
+    padding: 3rem;
+    border-radius: 1rem;
+    height: 100%;
+
+    &__image{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: $mb-sm;
+    }
+
+    &__title{
+        font-size: $font-default;
+        font-weight: 500;
+        color: $text-100;
+        margin-bottom: $mb-sm;
+    }
+
+    &__description{
+        font-size: $font-sm;
+        font-weight: 400;
+        color: $text-100;
+        margin-bottom: $mb-sm;
+    }
+
+    &__link{
+        &--demo{
+            margin-right: 3rem;
+        }
+    }
+}

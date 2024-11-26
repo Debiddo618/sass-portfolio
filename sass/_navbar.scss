@@ -5,11 +5,14 @@
     grid-template-columns: minmax(min-content,1fr) 1fr minmax(min-content,4fr) 1fr minmax(max-content,1fr) ;
     background-color: $bg-100;
     padding: 2rem;
-    font-size: 2.5rem;
+    font-size: $font-default;
     align-items: center;
     border-radius: 1rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
     color: $text-100;
+
+    position: relative;
+    z-index: 1;
 
     border-radius: 16px;
     box-shadow: $neon-light;
@@ -46,15 +49,7 @@
     }
 
     &__cta{
-        cursor: pointer;
-        font-size: 2.5rem;
-        padding: 1rem 2rem;
-        border-radius: 2rem;
-        border: none;
         margin-right: 1rem;
-        box-shadow: $neon-light;
-        color: $accent-100;
-
     }
 
     &__theme-switcher{

@@ -20,13 +20,97 @@ html {
   background-color: #0F1C2E;
 }
 
+.main {
+  grid-column: center-start/center-end;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #cee8ff;
+}
+
 .header {
   background-color: #0F1C2E;
   grid-column: center-start/center-end;
   grid-row: 1/2;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: min-content 1fr;
+  gap: 3rem;
+}
+.header > * {
+  padding: 2rem;
+  margin-top: 7rem;
+}
+.header__hero {
+  color: #fff;
+}
+.header__intro {
+  position: relative;
+  z-index: 1;
+}
+.header__intro--start {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+.header__intro--middle {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+.header__intro--end {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 500;
+  width: 70%;
+  margin-bottom: 4.5rem;
+}
+.header__intro-button--1 {
+  margin-right: 2rem;
+}
+.header__pictures {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.header__image {
+  z-index: 1;
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
+  animation: float ease 3s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.header-background {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background-image: linear-gradient(to right, rgba(15, 28, 46, 0.7), rgba(15, 28, 46, 0.7)), url("../img/trees.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .nav {
@@ -38,8 +122,10 @@ html {
   font-size: 2.5rem;
   align-items: center;
   border-radius: 1rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
   color: #FFFFFF;
+  position: relative;
+  z-index: 1;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
 }
@@ -66,15 +152,69 @@ html {
   grid-column: 5/6;
 }
 .nav__cta {
+  margin-right: 1rem;
+}
+.nav__theme-switcher {
+  cursor: pointer;
+}
+
+.btn {
   cursor: pointer;
   font-size: 2.5rem;
   padding: 1rem 2rem;
   border-radius: 2rem;
   border: none;
-  margin-right: 1rem;
   box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
   color: #3D5A80;
+  background-color: #fff;
 }
-.nav__theme-switcher {
-  cursor: pointer;
+.btn a {
+  text-decoration: none;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+}
+.games__subtitle {
+  margin-bottom: 2.5rem;
+}
+
+.games__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 50rem));
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.game-card {
+  width: 50rem;
+  background-color: #1f2b3e;
+  padding: 3rem;
+  border-radius: 1rem;
+  height: 100%;
+}
+.game-card__image {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+.game-card__title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
+.game-card__description {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
+.game-card__link--demo {
+  margin-right: 3rem;
 }/*# sourceMappingURL=main.css.map */

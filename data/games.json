@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Tetris",
+        "imageSrc": "games/tetris.png",
+        "description": "Single-player Tetris game created using vanilla JavaScript, HTML, and CSS. The player uses arrow keys to move, drop, or rotate pieces.",
+        "skills": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ],
+        "demo": "https://debiddo618.github.io/tetris-javascript/",
+        "source": "https://github.com/Debiddo618/tetris-javascript"
+    },
+    {
+        "title": "Pokemon Memory Game",
+        "imageSrc": "games/pokemonmemory.png",
+        "description": "Created with the PokeAPI. Match each pokemon while listening to Littleroot Town theme!",
+        "skills": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ],
+        "demo": "https://debiddo618.github.io/pokemon-memory-game/",
+        "source": "https://github.com/Debiddo618/pokemon-memory-game"
+    },
+    {
+        "title": "Checkers",
+        "imageSrc": "games/checkers.png",
+        "description": "Get a friend and play some checkers!",
+        "skills": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ],
+        "demo": "https://debiddo618.github.io/checker-js/",
+        "source": "https://github.com/Debiddo618/checker-js"
+    },
+    {
+        "title": "Pokemon Tic-Tac-Toe",
+        "imageSrc": "games/poketictactoe.png",
+        "description": "Two Pokémon clash in a PokeTacToe battle with the bike theme playing, created using PokeAPI.",
+        "skills": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ],
+        "demo": "https://debiddo618.github.io/pokemon-tic-tac-toe-js/",
+        "source": "https://github.com/Debiddo618/pokemon-tic-tac-toe-js"
+    }
+]

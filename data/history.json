@@ -1,0 +1,47 @@
+[
+  {
+    "role": "Software Engineering Bootcamp",
+    "organisation": "General Assembly",
+    "startDate": "Apr, 2024",
+    "endDate": "Jul, 2024",
+    "experiences": [
+      "Developed numerous web applications using JavaScript with the MERN stack and Python with Django",
+      "Managed a collaborative three-person fullstack project using GitHub"
+    ],
+    "imageSrc": "history/ga.png"
+  },
+  {
+    "role": "Server/Bartender",
+    "organisation": "Blue Sunday",
+    "startDate": "Oct, 2022",
+    "endDate": "May, 2023",
+    "experiences": [
+      "Served over 500+ customers and generating over $35,000 in sales a month",
+      "Trained new staff, fostering a cohesive team environment and improving service efficiency"
+    ],
+    "imageSrc": "history/bluesunday.png"
+  },
+  {
+    "role": "Professional Development Incubator",
+    "organisation": "Interclypse, Annapolis Junction, MD",
+    "startDate": "Mar, 2022",
+    "endDate": "Sep, 2022",
+    "experiences": [
+      "Developed a fullstack inventory management web application",
+      "Backend: Spring Framework, Java, and MongoDB",
+      "Frontend: React, Redux, Axios, BootStrap, and MaterialUI"
+    ],
+    "imageSrc": "history/interclypse.webp"
+  },
+  {
+    "role": "Bachelor of Science - Applied Mathematics",
+    "organisation": "University of Maryland, College Park",
+    "startDate": "Aug, 2016",
+    "endDate": "Dec, 2021",
+    "experiences": [
+      "Studied pure mathematics and statistics",
+      "Relevant Experience: Java, Python, C"
+    ],
+    "imageSrc": "history/umd.png"
+  }
+]

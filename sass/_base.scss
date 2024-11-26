@@ -1,5 +1,7 @@
 // Color Variables
 
+$color-white:#fff;
+
 // dark theme
 $primary-100: #1F3A5F;
 $primary-200: #4d648d;
@@ -15,7 +17,19 @@ $bg-300: #374357;
 // box shadow
 $neon-light: 0 4px 30px rgba($bg-300, 0.1),0 4px 30px rgba($bg-300, 0.5), 0 4px 30px rgba($bg-300, 0.5);
 
+// fonts
+$font-default: 2.5rem;
+$font-sm:1.5rem;
+$font-md:3.5rem;
+$font-lg:4rem;
 
+$font-heading: 4rem;
+$font-subtitle: 2rem;
+
+
+
+// grid
+$grid-gap: 3rem;
 
 *,*::before,*::after{
     margin: 0;
@@ -37,5 +51,8 @@ html{
     grid-template-columns: 1fr [center-start] repeat(10, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 1fr;
     grid-template-rows: 100vh;
     background-color: $bg-100;
+}
 
+.main{
+    grid-column: center-start/center-end;
 }
