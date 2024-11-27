@@ -2,8 +2,29 @@
 
 import gamesData from "./data/games.json";
 import projectsData from "./data/projects.json";
+import skillsData from "./data/skills.json";
 
 import { getImageUrl } from "./utils";
+
+// used to create skill slider
+function createSkillSlider(skillsData, containerSelector) {
+  const slider = document.querySelector(containerSelector);
+  const list = document.createElement("div");
+  list.classList.add('list');
+  
+  skillsData.forEach((skillData, index) => {
+    const skill = document.createElement('div');
+    skill.classList.add("item");
+    skill.style.setProperty('--position', index + 1);
+    skill.innerHTML = `
+      <img src="${getImageUrl(skillData.imageSrc)}" alt="${skillData.title}" />
+    `;
+    list.appendChild(skill);
+  });
+  
+  slider.appendChild(list);
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // games grid
@@ -61,7 +82,14 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
   `;
-
     projectGridWeb.appendChild(projectCard);
   });
+
+  // slider
+  createSkillSlider(skillsData, '.slider');
+  createSkillSlider(skillsData, '.slider2');
+
+
+
+
 });

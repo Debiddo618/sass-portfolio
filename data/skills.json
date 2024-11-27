@@ -62,5 +62,9 @@
   {
     "title": "Flask",
     "imageSrc": "skills/flask.png"
+  },
+  {
+    "title": "Sass",
+    "imageSrc": "skills/sass.png"
   }
 ]

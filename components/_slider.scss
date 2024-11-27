@@ -1,0 +1,59 @@
+// need to update quantity when adding new skills
+$slider-height:7rem;
+$slider-width:5rem;
+$slider-quantity:17;
+
+.slider, .slider2{
+    position: relative;
+    grid-column: center-start/center-end;
+    width: 100%;
+    height: $slider-height;
+    min-width: calc($slider-width*$slider-quantity);
+    overflow: hidden;
+    background-color: $bg-300;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: $mb-sm;
+    margin-top: $mb-sm;
+
+    .list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        height: $slider-height;
+        .item{
+            width: $slider-width;
+            height: $slider-height;
+            position: absolute;
+            left: 100%;
+            animation: autorun 10s linear infinite;
+            animation-delay: calc((10s/$slider-quantity)*(var(--position) - 1));
+            margin: 1rem;
+
+            img{
+                display: block;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+.slider2{
+    .list .item{
+        animation-direction: reverse;
+    }
+}
+
+@keyframes autorun {
+    from{
+        left: 100%;
+    }
+    to{
+        left: calc($slider-width)*-1;
+    }
+    
+}
