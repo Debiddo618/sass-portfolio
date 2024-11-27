@@ -47,10 +47,12 @@ html{
 }
 
 .container{
+    position: relative;
     display: grid;
     grid-template-columns: [full-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 1fr [full-end];
     grid-template-rows: 100vh min-content;
     background-color: $bg-100;
+    overflow-x: hidden;
 }
 
 .main{
