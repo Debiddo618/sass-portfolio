@@ -70,7 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="project-card--face2">
       <p class="project-card__description">${project.description}</p>
       <ul class="project-card__skills">
-        ${project.skills.map((skill) => `<li>${skill}</li>`).join("")}
+        <div class="project-card__skills-title">Skills</div>
+        ${project.skills.map((skill) => `<li class="project-card__skill">${skill}</li>`).join("")}
       </ul>
       <div class="project-card__links">
         <a href="${

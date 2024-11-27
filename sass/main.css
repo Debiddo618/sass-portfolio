@@ -200,6 +200,7 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 1.5rem;
+  border-radius: 1rem;
 }
 .game-card__title {
   font-size: 2.5rem;
@@ -264,6 +265,9 @@ html {
   z-index: -1;
   opacity: 0;
   top: 0;
+  display: grid;
+  grid-template-columns: minmax(min-content, 2fr) minmax(min-content, 1fr);
+  justify-items: center;
 }
 .project-card:hover .project-card--face2 {
   position: relative;
@@ -273,15 +277,31 @@ html {
 }
 .project-card__image {
   width: 100%;
+  border-radius: 1rem;
 }
 .project-card__title {
   color: #FFFFFF;
   font-size: 3.5rem;
+  margin-bottom: 1.5rem;
 }
 .project-card__skills {
   color: #FFFFFF;
   font-size: 1.5rem;
   list-style: none;
+}
+.project-card__skills-title {
+  display: inline-block;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #fff;
+  font-weight: 500;
+}
+.project-card__skill {
+  font-size: 1.5rem;
+  margin-bottom: 3px;
+  font-weight: 500;
 }
 .project-card__description {
   font-size: 2.5rem;
@@ -289,6 +309,8 @@ html {
 }
 .project-card__links {
   margin-top: 2rem;
+  grid-column: 1/-1;
+  justify-self: flex-start;
 }
 .project-card__link {
   margin-top: 2rem;

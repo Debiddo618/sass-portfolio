@@ -54,6 +54,9 @@
         z-index: -1;
         opacity: 0;
         top: 0;
+        display: grid;
+        grid-template-columns: minmax(min-content,2fr) minmax(min-content,1fr) ;
+        justify-items: center;
     }
 
     &:hover &--face2{
@@ -65,17 +68,36 @@
 
     &__image{
         width: 100%;
+        border-radius: 1rem;
 
     }
 
     &__title{
         color: $text-100;
         font-size: $font-md;
+        margin-bottom: $mb-sm;
     }
     &__skills{
         color: $text-100;
         font-size: $font-sm;
         list-style: none;
+
+        &-title{
+            display: inline-block;
+            font-size: $font-default;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid $color-white;
+            font-weight: 500;
+        }
+
+    }
+
+    &__skill{
+        font-size: 1.5rem;
+        margin-bottom: 3px;
+        font-weight: 500;
     }
 
     &__description{
@@ -85,6 +107,8 @@
 
     &__links{
         margin-top: 2rem;
+        grid-column: 1/-1;
+        justify-self: flex-start;
     }
 
     &__link{
