@@ -20,12 +20,16 @@
         <div class="nav__logo">Logo</div>
         <ul class="nav__links">
           <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
           <li class="nav__item">
             <a href="#" class="nav__link">Experience</a>
           </li>
-          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Games</a></li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="#games" class="nav__link">Games</a>
+          </li>
           <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
         </ul>
         <div class="nav__buttons">
@@ -61,12 +65,52 @@
       </div>
     </header>
     <main class="main">
-      <div class="about">About</div>
+      <div class="about" id="about">
+        <div class="about__title title">About</div>
+        <div class="about__subtitle subtitle">A little about me</div>
+        <div class="about__grid">
+          <div class="about__pictures">
+            <img
+              src="img/aboutImage.png"
+              alt="Picture of me"
+              class="about__image"
+            />
+          </div>
+          <div class="about-details">
+            <div class="about-details--frontend">
+              <div class="about-details-title">Frontend</div>
+              <div class="about-details-description">
+                I have experience building responsive and optimized sites using
+                React, Bootstrap, MUI, and Pure CSS animations.
+              </div>
+            </div>
+            <div class="about-details--backend">
+              <div class="about-details-title">Backend</div>
+              <div class="about-details-description">
+                I have experience developing fast and optimised back-end systems
+                and APIs using Django, Express, Node.js, MongoDB, and
+                PostgreSQL.
+              </div>
+            </div>
+            <div class="about-details--mobile">
+              <div class="about-details-title">Mobile</div>
+              <div class="about-details-description">
+                I am currently learning React Native and have experience
+                developing basic mobile applications with it.
+              </div>
+            </div>
+
+            <button class="about-details-resume btn">Resume</button>
+          </div>
+        </div>
+      </div>
       <div class="experience">Experience</div>
       <div class="slider"></div>
       <div class="projects" id="projects">
         <div class="projects__title title">Projects</div>
-        <div class="projects__subtitle subtitle">Made with different tech stacks</div>
+        <div class="projects__subtitle subtitle">
+          Made with different tech stacks
+        </div>
         <div class="projects__grid">
           <div class="project__grid--web"></div>
           <div class="project__grid--mobile">mobile</div>
@@ -74,7 +118,7 @@
         </div>
       </div>
       <div class="slider2"></div>
-      <div class="games">
+      <div class="games" id="games">
         <div class="games__title title">Games</div>
         <div class="games__subtitle subtitle">Play some games</div>
         <div class="games__grid"></div>
