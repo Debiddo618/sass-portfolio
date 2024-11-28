@@ -1,5 +1,5 @@
 // margin bottom
-$mb-sm: 1.5rem;
+$mb-sm: 1rem;
 $mb-md: 2.5rem;
 $mb-lg: 4.5rem;
 
@@ -11,7 +11,7 @@ $mr-sm: 3rem;
     font-size: $font-heading;
     font-weight: 700;
     color: $text-100;
-    margin-bottom: $mb-sm;
+    text-transform: uppercase;
 }
 
 .subtitle{
@@ -19,4 +19,5 @@ $mr-sm: 3rem;
     font-weight: 500;
     color: $accent-200;
     margin-bottom: $mb-lg;
+    text-transform: uppercase;
 }

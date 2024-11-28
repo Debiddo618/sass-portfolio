@@ -10,21 +10,20 @@ import { getImageUrl } from "./utils";
 function createSkillSlider(skillsData, containerSelector) {
   const slider = document.querySelector(containerSelector);
   const list = document.createElement("div");
-  list.classList.add('list');
-  
+  list.classList.add("list");
+
   skillsData.forEach((skillData, index) => {
-    const skill = document.createElement('div');
+    const skill = document.createElement("div");
     skill.classList.add("item");
-    skill.style.setProperty('--position', index + 1);
+    skill.style.setProperty("--position", index + 1);
     skill.innerHTML = `
       <img src="${getImageUrl(skillData.imageSrc)}" alt="${skillData.title}" />
     `;
     list.appendChild(skill);
   });
-  
+
   slider.appendChild(list);
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   // games grid
@@ -61,8 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
     projectCard.innerHTML = `
     <div class="project-card--face1">
       <img src="${getImageUrl(project.imageSrc)}" alt="${
-        project.title
-      }" class="project-card__image">
+      project.title
+    }" class="project-card__image">
       <h3 class="project-card__title">${project.title}</h3>
     </div>
 
@@ -71,7 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="project-card__description">${project.description}</p>
       <ul class="project-card__skills">
         <div class="project-card__skills-title">Skills</div>
-        ${project.skills.map((skill) => `<li class="project-card__skill">${skill}</li>`).join("")}
+        ${project.skills
+          .map((skill) => `<li class="project-card__skill">${skill}</li>`)
+          .join("")}
       </ul>
       <div class="project-card__links">
         <a href="${
@@ -87,10 +88,47 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // slider
-  createSkillSlider(skillsData, '.slider');
-  createSkillSlider(skillsData, '.slider2');
+  createSkillSlider(skillsData, ".slider");
+  createSkillSlider(skillsData, ".slider2");
+});
 
+// form submission
 
+const form = document.getElementById("form");
+const result = document.getElementById("result");
 
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait...";
 
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: json,
+  })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        result.innerHTML = json.message;
+      } else {
+        console.log(response);
+        result.innerHTML = json.message;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      result.innerHTML = "Something went wrong!";
+    })
+    .then(function () {
+      form.reset();
+      setTimeout(() => {
+        result.style.display = "none";
+      }, 3000);
+    });
 });

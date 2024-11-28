@@ -12,8 +12,9 @@
     grid-template-columns: repeat(auto-fit,minmax(min-content, 50rem));
     align-items: center;
     justify-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: $grid-gap;
+    margin-bottom: $mb-sm;
 }
 
 .game-card{
@@ -22,6 +23,7 @@
     padding: 3rem;
     border-radius: 1rem;
     height: 100%;
+    margin-bottom: $mb-sm;
 
     &__image{
         display: block;
@@ -43,7 +45,7 @@
         font-weight: 400;
         color: $text-100;
         margin-bottom: $mb-sm;
-        height: 5rem;
+        height: 7rem;
     }
 
     &__link{

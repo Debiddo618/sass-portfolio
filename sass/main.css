@@ -27,10 +27,10 @@ html {
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
 
 .subtitle {
@@ -38,6 +38,7 @@ html {
   font-weight: 500;
   color: #cee8ff;
   margin-bottom: 4.5rem;
+  text-transform: uppercase;
 }
 
 .header {
@@ -62,16 +63,16 @@ html {
 }
 .header__intro--start {
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 700;
 }
 .header__intro--middle {
   font-size: 4rem;
   font-weight: 900;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .header__intro--end {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.5;
   font-weight: 500;
   width: 70%;
@@ -202,7 +203,7 @@ html {
   font-size: 3.5rem;
   color: #FFFFFF;
   font-weight: 900;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .about-details-description {
   font-size: 2.5rem;
@@ -232,8 +233,9 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(min-content, 50rem));
   align-items: center;
   justify-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 3rem;
+  margin-bottom: 1rem;
 }
 
 .game-card {
@@ -242,27 +244,28 @@ html {
   padding: 3rem;
   border-radius: 1rem;
   height: 100%;
+  margin-bottom: 1rem;
 }
 .game-card__image {
   display: block;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   border-radius: 1rem;
 }
 .game-card__title {
   font-size: 2.5rem;
   font-weight: 500;
   color: #FFFFFF;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .game-card__description {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #FFFFFF;
-  margin-bottom: 1.5rem;
-  height: 5rem;
+  margin-bottom: 1rem;
+  height: 7rem;
 }
 .game-card__link--demo {
   margin-right: 3rem;
@@ -331,11 +334,11 @@ html {
 .project-card__title {
   color: #FFFFFF;
   font-size: 3.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .project-card__skills {
   color: #FFFFFF;
-  font-size: 1.5rem;
+  font-size: 2rem;
   list-style: none;
 }
 .project-card__skills-title {
@@ -384,8 +387,8 @@ html {
   background-color: #374357;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .slider .list, .slider2 .list {
   display: flex;
@@ -422,4 +425,99 @@ html {
   to {
     left: -5rem;
   }
+}
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  gap: 3rem;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  background-color: #1f2b3e;
+  padding: 3rem;
+  border-radius: 1rem;
+  line-height: 1.5;
+}
+.contact__details {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  color: #FFFFFF;
+  gap: 2rem;
+}
+.contact__details__description {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.contact__details__socials__list {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  align-self: flex-end;
+}
+.contact__details__socials__list ion-icon {
+  width: 3rem;
+  height: 3rem;
+  fill: #fff;
+  margin-right: 1rem;
+}
+.contact__details--freelance, .contact__details--email, .contact__details--residence {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.contact__details__icon {
+  box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  padding: 1rem;
+  border: 1px solid #fff;
+}
+.contact__details__icon ion-icon {
+  width: 100%;
+  height: 100%;
+  fill: inherit;
+}
+.contact__details-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.contact__details-info {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+}
+.form-group textarea {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.result {
+  background-color: red;
 }/*# sourceMappingURL=main.css.map */
