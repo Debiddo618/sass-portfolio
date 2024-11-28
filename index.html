@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./sass/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>David's Portfolio</title>
   </head>
   <body class="container">
@@ -32,7 +33,9 @@
           <li class="nav__item">
             <a href="#games" class="nav__link">Games</a>
           </li>
-          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
         </ul>
         <div class="nav__buttons">
           <button class="nav__cta btn">Get Started</button>
@@ -106,7 +109,13 @@
           </div>
         </div>
       </div>
-      <div class="experience">Experience</div>
+
+      <div class="experience">
+        <div class="experience title">Experience</div>
+        <div class="experience subtitle">A glimpse into my past</div>
+        <div class="experience__timeline"></div>
+      </div>
+
       <div class="slider"></div>
       <div class="projects" id="projects">
         <div class="projects__title title">Projects</div>
@@ -126,7 +135,7 @@
         <div class="games__grid"></div>
       </div>
 
-      <div class="contact" id="about">
+      <div class="contact" id="contact">
         <div class="contact__title title">Contact</div>
         <div class="contact__subtitle subtitle">Feel free to reach out!</div>
 
@@ -258,7 +267,19 @@
         </div>
       </div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__copyright">
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        &copy; All Rights Reserved
+      </div>
+      <div class="footer__comment">
+        Built without any frameworks. All components are created using basic
+        JavaScript, HTML, and CSS. Sass and Grid Layout were also used. Deployed
+        on GitHub.
+      </div>
+    </footer>
     <script type="module" src="/main.js"></script>
     <script
       type="module"
@@ -268,5 +289,9 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

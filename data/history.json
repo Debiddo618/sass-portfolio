@@ -1,7 +1,7 @@
 [
   {
     "role": "Software Engineering Bootcamp",
-    "organisation": "General Assembly",
+    "organization": "General Assembly",
     "startDate": "Apr, 2024",
     "endDate": "Jul, 2024",
     "experiences": [
@@ -12,7 +12,7 @@
   },
   {
     "role": "Server/Bartender",
-    "organisation": "Blue Sunday",
+    "organization": "Blue Sunday",
     "startDate": "Oct, 2022",
     "endDate": "May, 2023",
     "experiences": [
@@ -23,7 +23,7 @@
   },
   {
     "role": "Professional Development Incubator",
-    "organisation": "Interclypse, Annapolis Junction, MD",
+    "organization": "Interclypse, Annapolis Junction, MD",
     "startDate": "Mar, 2022",
     "endDate": "Sep, 2022",
     "experiences": [
@@ -35,7 +35,7 @@
   },
   {
     "role": "Bachelor of Science - Applied Mathematics",
-    "organisation": "University of Maryland, College Park",
+    "organization": "University of Maryland, College Park",
     "startDate": "Aug, 2016",
     "endDate": "Dec, 2021",
     "experiences": [

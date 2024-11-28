@@ -62,7 +62,7 @@ html {
   z-index: 1;
 }
 .header__intro--start {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -172,9 +172,15 @@ html {
   box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
   color: #3D5A80;
   background-color: #fff;
+  transition: all 0.2s;
 }
 .btn a {
   text-decoration: none;
+  color: #3D5A80;
+}
+
+.btn:hover {
+  transform: scale(1.1);
 }
 
 .about {
@@ -206,7 +212,7 @@ html {
   margin-bottom: 1rem;
 }
 .about-details-description {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #FFFFFF;
   font-weight: 500;
   margin-bottom: 4.5rem;
@@ -255,7 +261,7 @@ html {
   border-radius: 1rem;
 }
 .game-card__title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 500;
   color: #FFFFFF;
   margin-bottom: 1rem;
@@ -343,7 +349,7 @@ html {
 }
 .project-card__skills-title {
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 1rem;
@@ -356,7 +362,7 @@ html {
   font-weight: 500;
 }
 .project-card__description {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #FFFFFF;
 }
 .project-card__links {
@@ -426,6 +432,9 @@ html {
     left: -5rem;
   }
 }
+.contact {
+  margin-bottom: 4.5rem;
+}
 .contact__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
@@ -441,6 +450,7 @@ html {
   padding: 3rem;
   border-radius: 1rem;
   line-height: 1.5;
+  background-color: #0a1727;
 }
 .contact__details {
   display: grid;
@@ -452,6 +462,13 @@ html {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.25;
+}
+.contact__details__description a {
+  text-decoration: none;
+  color: #fff;
+}
+.contact__details__description a:hover {
+  border-bottom: 1px solid #fff;
 }
 .contact__details__socials__list {
   display: flex;
@@ -468,6 +485,7 @@ html {
 .contact__details--freelance, .contact__details--email, .contact__details--residence {
   display: grid;
   grid-template-columns: min-content 1fr;
+  align-items: center;
   gap: 2rem;
   margin-bottom: 1rem;
 }
@@ -485,7 +503,7 @@ html {
   fill: inherit;
 }
 .contact__details-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -520,4 +538,119 @@ html {
 
 .result {
   background-color: red;
+}
+
+.footer {
+  font-size: 1.5rem;
+  color: #fff;
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  align-items: center;
+  padding: 2rem;
+  border-top: 1px solid #fff;
+  background-color: #0a1727;
+}
+
+.experience {
+  color: #fff;
+}
+.experience__image {
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  box-sizing: content-box;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #374357;
+  position: absolute;
+  top: 2rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+.experience__title {
+  font-size: 3rem;
+}
+.experience__date {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.experience__description {
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+.experience__timeline {
+  position: relative;
+  margin-bottom: 4.5rem;
+}
+.experience__timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background-color: #374357;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  animation: moveline 2s linear forwards;
+}
+.experience__container {
+  padding: 1rem 5rem;
+  position: relative;
+  width: 50%;
+}
+.experience__container--left {
+  left: 0;
+}
+.experience__container--left img {
+  right: 0;
+  transform: translateX(50%);
+}
+.experience__container--right {
+  left: 50%;
+}
+.experience__container--right img {
+  left: 0;
+  transform: translateX(-50%);
+}
+.experience__text-box {
+  padding: 20px 30px;
+  background: #374357;
+  border-radius: 6px;
+  font-size: 15px;
+  position: relative;
+}
+.experience__left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 3rem;
+  z-index: 1;
+  border-top: 1.5rem solid transparent;
+  border-bottom: 1.5rem solid transparent;
+  border-left: 1.5rem solid #374357;
+  right: 0;
+  transform: translateX(100%);
+}
+.experience__right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 3rem;
+  z-index: 1;
+  border-top: 1.5rem solid transparent;
+  border-bottom: 1.5rem solid transparent;
+  border-right: 1.5rem solid #374357;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+@keyframes moveline {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

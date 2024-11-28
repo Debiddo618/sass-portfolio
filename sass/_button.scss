@@ -7,8 +7,14 @@
     box-shadow: $neon-light;
     color: $accent-100;
     background-color: $color-white;
+    transition: all 0.2s;
     
     a{
         text-decoration: none;
+        color: $accent-100;
     }
+}
+
+.btn:hover{
+    transform: scale(1.1);
 }

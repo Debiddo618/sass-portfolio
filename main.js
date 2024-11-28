@@ -3,6 +3,7 @@
 import gamesData from "./data/games.json";
 import projectsData from "./data/projects.json";
 import skillsData from "./data/skills.json";
+import historyData from "./data/history.json";
 
 import { getImageUrl } from "./utils";
 
@@ -26,29 +27,46 @@ function createSkillSlider(skillsData, containerSelector) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // games grid
-  const gamesGrid = document.querySelector(".games__grid");
-  gamesData.forEach((game) => {
-    const gameCard = document.createElement("div");
-    gameCard.classList.add("game-card");
+  // Experience
+  const experienceTimeline = document.querySelector(".experience__timeline");
+  historyData.forEach((experience, index) => {
+    const experienceContainer = document.createElement("div");
+    experienceContainer.classList.add("experience__container");
 
-    gameCard.innerHTML = `
-        <img class="game-card__image" src="${getImageUrl(
-          game.imageSrc
-        )}" alt="${game.title}">
-        <div class="game-card__title">${game.title}</div>
-        <div class="game-card__description">${game.description}</div>
-        <div class="game-card__links">
-        <button class="game-card__link--demo btn"> <a href="${
-          game.demo
-        }" target="_blank">Live</a></button>
-        <button class="game-card__link--source btn"> <a href="${
-          game.source
-        }" target="_blank">Source</a></button>
-        </div>
-      `;
+    // Add container--left or container--right based on the index
+    if (index % 2 === 0) {
+      experienceContainer.classList.add("experience__container--left");
+      experienceContainer.setAttribute("data-aos","fade-right")
+    } else {
+      experienceContainer.classList.add("experience__container--right");
+      experienceContainer.setAttribute("data-aos","fade-left")
 
-    gamesGrid.appendChild(gameCard);
+    }
+
+    // Determine arrow class
+    const arrowClass =
+      index % 2 === 0
+        ? "experience__left-container-arrow"
+        : "experience__right-container-arrow";
+
+    experienceContainer.innerHTML = `
+      <img class="experience__image" src="${getImageUrl(
+        experience.imageSrc
+      )}" alt="${experience.organisation}" />
+      <div class="experience__text-box">
+        <div class="experience__title">${experience.organization}</div>
+        <div class="experience__date">${experience.startDate} - ${
+      experience.endDate
+    }</div>
+      <ul class="experience__list">
+        ${experience.experiences
+          .map((data) => `<li class="experience__description">${data}</li>`)
+          .join("")}
+      </ul>
+        <span class="${arrowClass}"></span>
+      </div>
+    `;
+    experienceTimeline.appendChild(experienceContainer);
   });
 
   // projects grid
@@ -85,6 +103,31 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   `;
     projectGridWeb.appendChild(projectCard);
+  });
+
+  // games grid
+  const gamesGrid = document.querySelector(".games__grid");
+  gamesData.forEach((game) => {
+    const gameCard = document.createElement("div");
+    gameCard.classList.add("game-card");
+
+    gameCard.innerHTML = `
+         <img class="game-card__image" src="${getImageUrl(
+           game.imageSrc
+         )}" alt="${game.title}">
+         <div class="game-card__title">${game.title}</div>
+         <div class="game-card__description">${game.description}</div>
+         <div class="game-card__links">
+         <button class="game-card__link--demo btn"> <a href="${
+           game.demo
+         }" target="_blank">Live</a></button>
+         <button class="game-card__link--source btn"> <a href="${
+           game.source
+         }" target="_blank">Source</a></button>
+         </div>
+       `;
+
+    gamesGrid.appendChild(gameCard);
   });
 
   // slider
