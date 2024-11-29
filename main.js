@@ -82,8 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }" class="project-card__image">
       <h3 class="project-card__title">${project.title}</h3>
     </div>
-
-
     <div class="project-card--face2">
       <p class="project-card__description">${project.description}</p>
       <ul class="project-card__skills">

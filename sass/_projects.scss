@@ -15,6 +15,13 @@
 }
 
 .project__grid{
+    &__title{
+        color: $color-white;
+        font-size: $font-md;
+        font-weight: 900;
+        margin-bottom: $mb-md;
+        text-align: center;
+    }
     &--web{
         grid-row: 1/-1;
         display: grid;
@@ -25,7 +32,6 @@
         background-color: blue;
     }
     &--sass{
-        background-color: orange;
     }
 }
 
@@ -123,5 +129,32 @@
             display: inline-block;
         }
 
+    }
+}
+
+// sass projects
+.sass__project{
+    display: grid;
+    grid-template-columns: min-content minmax(min-content,1fr);
+    color: $color-white;
+    gap: 3rem;
+
+    &__image{
+        display: inline-block;
+        width: 45rem;
+        border-radius: 1rem;
+    }
+
+    &__title{
+        font-size: $font-default;
+    }
+    &__description{
+        font-size: $font-sm;
+        line-height: 1.25;
+        margin-bottom: $mb-sm;
+    }
+
+    &__links{
+        display: flex;
     }
 }

@@ -287,6 +287,13 @@ html {
   grid-template-rows: repeat(2, minmax(min-content, 1fr));
 }
 
+.project__grid__title {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
 .project__grid--web {
   grid-row: 1/-1;
   display: grid;
@@ -295,10 +302,6 @@ html {
 .project__grid--mobile {
   background-color: blue;
 }
-.project__grid--sass {
-  background-color: orange;
-}
-
 .project-card {
   margin-bottom: 4.5rem;
   padding: 0 3rem;
@@ -381,6 +384,29 @@ html {
 .project-card__link--source {
   text-decoration: none;
   display: inline-block;
+}
+
+.sass__project {
+  display: grid;
+  grid-template-columns: min-content minmax(min-content, 1fr);
+  color: #fff;
+  gap: 3rem;
+}
+.sass__project__image {
+  display: inline-block;
+  width: 45rem;
+  border-radius: 1rem;
+}
+.sass__project__title {
+  font-size: 3rem;
+}
+.sass__project__description {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+.sass__project__links {
+  display: flex;
 }
 
 .slider, .slider2 {
