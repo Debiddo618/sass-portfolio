@@ -89,7 +89,8 @@ html {
 .header__image {
   z-index: 1;
   display: block;
-  width: 50rem;
+  width: 100%;
+  max-width: 50rem;
   border-radius: 50%;
   box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
   animation: float ease 3s infinite;
@@ -107,7 +108,6 @@ html {
   }
 }
 .header-background {
-  z-index: 1;
   width: 100%;
   height: 100%;
   grid-column: 1/-1;
@@ -116,6 +116,16 @@ html {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
+  position: relative;
+}
+.header-background:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 100%;
+  background-image: linear-gradient(to bottom, #0a1727, #0F1C2E);
+  margin-bottom: 1rem;
 }
 
 .nav {
@@ -194,7 +204,8 @@ html {
 .about__image {
   z-index: 1;
   display: block;
-  width: 50rem;
+  width: 100%;
+  max-width: 50rem;
   border-radius: 50%;
   box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
   animation: float ease 3s infinite;
@@ -216,18 +227,6 @@ html {
   color: #FFFFFF;
   font-weight: 500;
   margin-bottom: 4.5rem;
-}
-
-.about:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateX(-50%);
-  width: 200vw;
-  height: 100%;
-  background-image: linear-gradient(to bottom, #0a1727, #0F1C2E);
-  z-index: -1;
 }
 
 .games {
@@ -298,9 +297,6 @@ html {
   grid-row: 1/-1;
   display: grid;
   grid-template-rows: 4, 20rem;
-}
-.project__grid--mobile {
-  background-color: blue;
 }
 .project-card {
   margin-bottom: 4.5rem;
@@ -388,13 +384,13 @@ html {
 
 .sass__project {
   display: grid;
-  grid-template-columns: min-content minmax(min-content, 1fr);
+  grid-template-columns: 3fr minmax(min-content, 1fr);
   color: #fff;
   gap: 3rem;
 }
 .sass__project__image {
-  display: inline-block;
-  width: 45rem;
+  display: block;
+  width: 100%;
   border-radius: 1rem;
 }
 .sass__project__title {
@@ -407,6 +403,73 @@ html {
 }
 .sass__project__links {
   display: flex;
+}
+
+.mobile__projects__slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.mobile__projects__slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.mobile__projects__slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  display: none;
+}
+.mobile__projects__slide.active {
+  opacity: 1;
+  display: block;
+}
+.mobile__projects__slide__image {
+  display: block;
+  height: 50rem;
+  position: relative;
+  margin: 0 auto;
+}
+.mobile__projects__slide__details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.mobile__projects__slide__title {
+  color: #fff;
+  font-size: 3rem;
+  margin-right: 3rem;
+}
+.mobile__projects__slide__description {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.mobile__projects__slide__button {
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.mobile__projects__prev, .mobile__projects__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+.mobile__projects__prev:hover, .mobile__projects__next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.mobile__projects__prev {
+  left: 10px;
+}
+.mobile__projects__next {
+  right: 10px;
 }
 
 .slider, .slider2 {

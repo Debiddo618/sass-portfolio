@@ -29,7 +29,6 @@
     }
     &--mobile{
 
-        background-color: blue;
     }
     &--sass{
     }
@@ -75,7 +74,6 @@
     &__image{
         width: 100%;
         border-radius: 1rem;
-
     }
 
     &__title{
@@ -135,13 +133,14 @@
 // sass projects
 .sass__project{
     display: grid;
-    grid-template-columns: min-content minmax(min-content,1fr);
+    grid-template-columns: 3fr minmax(min-content,1fr);
     color: $color-white;
     gap: 3rem;
 
     &__image{
-        display: inline-block;
-        width: 45rem;
+        display: block;
+
+        width: 100%;
         border-radius: 1rem;
     }
 
@@ -158,3 +157,91 @@
         display: flex;
     }
 }
+
+// mobile projects
+.mobile__projects {
+    &__slider-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+    &__slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    &__slide {
+      min-width: 100%;
+      transition: opacity 0.5s ease-in-out;
+      opacity: 0;
+      display: none;
+  
+      &.active {
+        opacity: 1;
+        display: block;
+      }
+      
+      // All image screenshots must be 440x870
+      &__image {
+        display: block;
+        height: 50rem;
+        position: relative;
+        margin: 0 auto;
+      }
+  
+      &__details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: $mb-md;
+
+      }
+  
+      &__title {
+        color: $color-white;
+        font-size: $font-default;
+        margin-right: $mr-sm;
+      }
+
+      &__description{
+        color: $color-white;
+        font-size: $font-sm;
+        text-align: center;
+        margin-top: $mb-md;
+      }
+  
+      &__button {
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+  
+        &:hover {
+
+        }
+      }
+    }
+  
+    &__prev,
+    &__next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+  
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  
+    &__prev {
+      left: 10px;
+    }
+  
+    &__next {
+      right: 10px;
+    }
+}
+  

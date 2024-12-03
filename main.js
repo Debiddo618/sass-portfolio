@@ -4,7 +4,7 @@ import gamesData from "./data/games.json";
 import projectsData from "./data/projects.json";
 import skillsData from "./data/skills.json";
 import historyData from "./data/history.json";
-
+import mobileData from "./data/mobile.json";
 import { getImageUrl } from "./utils";
 
 // used to create skill slider
@@ -36,11 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add container--left or container--right based on the index
     if (index % 2 === 0) {
       experienceContainer.classList.add("experience__container--left");
-      experienceContainer.setAttribute("data-aos","fade-right")
+      experienceContainer.setAttribute("data-aos", "fade-right");
     } else {
       experienceContainer.classList.add("experience__container--right");
-      experienceContainer.setAttribute("data-aos","fade-left")
-
+      experienceContainer.setAttribute("data-aos", "fade-left");
     }
 
     // Determine arrow class
@@ -127,6 +126,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gamesGrid.appendChild(gameCard);
   });
+
+  // mobile projects
+  const mobileSliderWrapper = document.querySelector(
+    ".mobile__projects__slider-wrapper"
+  );
+  const mobileSlider = document.querySelector(".mobile__projects__slider");
+  const slideNav = document.createElement("div");
+  slideNav.classList.add("mobile__projects__slide-nav");
+
+  let currentIndex = 0;
+  const totalSlides = mobileData.length;
+
+  mobileData.forEach((data, index) => {
+    const slide = document.createElement("div");
+    slide.classList.add("mobile__projects__slide");
+    slide.setAttribute("id", `slide${index}`);
+
+    slide.innerHTML = `
+    <img class="mobile__projects__slide__image" src="${getImageUrl(
+      data.imageSrc
+    )}" alt="${data.title}">
+    <div class="mobile__projects__slide__details">
+      <div class="mobile__projects__slide__title">${data.title}</div>
+      <button class="mobile__projects__slide__button btn">
+        <a href="${data.source}" target="_blank">Source</a>
+      </button>
+    </div>
+    <div class="mobile__projects__slide__description">${data.description}</div>
+  `;
+    mobileSlider.append(slide);
+  });
+
+  // Create and append the navigation buttons
+  const prevButton = document.createElement("button");
+  prevButton.classList.add("mobile__projects__prev");
+  prevButton.innerHTML = "&#10094;"; // left arrow
+  prevButton.addEventListener("click", () => changeSlide(-1));
+
+  const nextButton = document.createElement("button");
+  nextButton.classList.add("mobile__projects__next");
+  nextButton.innerHTML = "&#10095;"; // right arrow
+  nextButton.addEventListener("click", () => changeSlide(1));
+
+  mobileSliderWrapper.append(prevButton, nextButton);
+
+  // Used for the mobile image slider
+  function changeSlide(direction) {
+    const slides = document.querySelectorAll(".mobile__projects__slide");
+    slides[currentIndex].classList.remove("active");
+
+    currentIndex += direction;
+    if (currentIndex < 0) {
+      currentIndex = totalSlides - 1;
+    } else if (currentIndex >= totalSlides) {
+      currentIndex = 0;
+    }
+
+    slides[currentIndex].classList.add("active");
+  }
+
+  // Initialize the first slide as active
+  document
+    .querySelectorAll(".mobile__projects__slide")[0]
+    .classList.add("active");
 
   // slider
   createSkillSlider(skillsData, ".slider");

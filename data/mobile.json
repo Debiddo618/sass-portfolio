@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Meal Picker",
+    "imageSrc": "mobile/RNMeals1.png",
+    "description": "View meals and add them to your favorites",
+    "source": "https://github.com/Debiddo618/RNMeals"
+  },
+  {
+    "title": "To-do List",
+    "imageSrc": "mobile/RNGoals1.png",
+    "description": "Add and Delete goals",
+    "source": "https://github.com/Debiddo618/RNCourse"
+  },
+  {
+    "title": "Guessing Game",
+    "imageSrc": "mobile/RNGuessingGame1.png",
+    "description": "Play a number guessing game with a computer",
+    "source": "https://github.com/Debiddo618/RNGuessingGame"
+  }
+]
