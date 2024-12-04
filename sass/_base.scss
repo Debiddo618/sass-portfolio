@@ -3,7 +3,7 @@ $primary-100-dark: #1F3A5F;
 $primary-200-dark: #4d648d;
 $primary-300-dark: #acc2ef;
 $accent-100-dark: #3D5A80;
-$accent-200-dark: #cee8ff;
+$accent-200-dark: #43b7ff;
 $text-100-dark: #FFFFFF;
 $text-200-dark: #e0e0e0;
 $bg-dark: #0a1727;
@@ -21,10 +21,10 @@ $accent-100-light: #71c4ef;
 $accent-200-light: #00668c;
 $text-100-light: #1d1c1c;
 $text-200-light: #313d44;
-$bg-light:#fff;
+$bg-light:#00668c;
 $bg-100-light: #fffefb;
 $bg-200-light: #f5f4f1;
-$bg-300-light: #cccbc8;  
+$bg-300-light: #fff;  
 $text-color-light:#fff;
 
 
@@ -42,9 +42,10 @@ $text-color-light:#fff;
     --bg-300: #{$bg-300-light};
     --text-color: #{$text-color-dark};
     --neon-light: "";
-    --bg-color:$bg-light
+    --bg-color:#{$bg-light};
 }
 
+// dark theme
 body.dark-theme {
     --primary-100: #{$primary-100-dark};
     --primary-200: #{$primary-200-dark};
@@ -83,6 +84,33 @@ body.dark-theme {
 
     .header__image, .about__image, .contact__details__icon,.nav,.btn{
         box-shadow: 0 4px 30px rgba(#374357, 0.1),0 4px 30px rgba(#374357, 0.5), 0 4px 30px rgba(#374357, 0.5);
+    }
+
+    // buttons
+    .btn {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .btn a{
+        color: #000;
+    }
+
+    // contact
+    .contact{
+
+    }
+
+    .form-group{
+        label{
+            color: var(--text-color);
+        }
+    }
+
+    //footer
+    .footer{
+        color: var(--text-color);
+        background-color: var(--bg-color);
     }
 
 }

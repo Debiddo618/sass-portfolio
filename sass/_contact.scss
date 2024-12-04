@@ -14,11 +14,14 @@
         justify-content: center;
         align-items: start;
         width: 100%;
-        background-color: var(--bg-200);
         padding: 3rem;
         border-radius: 1rem;
         line-height: 1.5;
         background-color: var(--bg-color);
+
+        &-title{
+            color: #fff;
+        }
     }
 
     &__details{
@@ -110,7 +113,7 @@
     }
 
     label{
-        color: var(--text-color);
+        color: #fff;
         font-size: $font-sm;
         margin-bottom: 5px;
         font-weight: 500;
@@ -119,7 +122,6 @@
 }
 
 .result{
-    // background-color: red;
     color: var(--text-100);
     font-size: $font-sm;
     margin-top: $mb-sm;

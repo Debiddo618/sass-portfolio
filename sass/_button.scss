@@ -4,13 +4,14 @@
     padding: 1rem 2rem;
     border-radius: 2rem;
     border: none;
-    color: var(--accent-100);
-    background-color: var(--text-color);
     transition: all 0.2s;
+    background-color: var(--accent-200);
+    color: #fff;
+
     
     a{
         text-decoration: none;
-        color: var(--accent-100);
+        color: #fff;
     }
 }
 

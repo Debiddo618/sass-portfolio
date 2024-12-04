@@ -23,10 +23,10 @@
   --text-200: #313d44;
   --bg-100: #fffefb;
   --bg-200: #f5f4f1;
-  --bg-300: #cccbc8;
+  --bg-300: #fff;
   --text-color: #000;
   --neon-light: "";
-  --bg-color:$bg-light ;
+  --bg-color:#00668c;
 }
 
 body.dark-theme {
@@ -34,7 +34,7 @@ body.dark-theme {
   --primary-200: #4d648d;
   --primary-300: #acc2ef;
   --accent-100: #3D5A80;
-  --accent-200: #cee8ff;
+  --accent-200: #43b7ff;
   --text-100: #FFFFFF;
   --text-200: #e0e0e0;
   --bg-100: #0F1C2E;
@@ -65,6 +65,20 @@ body.dark-theme .header-background:before {
 }
 body.dark-theme .header__image, body.dark-theme .about__image, body.dark-theme .contact__details__icon, body.dark-theme .nav, body.dark-theme .btn {
   box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
+}
+body.dark-theme .btn {
+  background-color: #fff;
+  color: #000;
+}
+body.dark-theme .btn a {
+  color: #000;
+}
+body.dark-theme .form-group label {
+  color: var(--text-color);
+}
+body.dark-theme .footer {
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 *, *::before, *::after {
@@ -218,13 +232,13 @@ html {
   padding: 1rem 2rem;
   border-radius: 2rem;
   border: none;
-  color: var(--accent-100);
-  background-color: var(--text-color);
   transition: all 0.2s;
+  background-color: var(--accent-200);
+  color: #fff;
 }
 .btn a {
   text-decoration: none;
-  color: var(--accent-100);
+  color: #fff;
 }
 
 .btn:hover {
@@ -574,11 +588,13 @@ html {
   justify-content: center;
   align-items: start;
   width: 100%;
-  background-color: var(--bg-200);
   padding: 3rem;
   border-radius: 1rem;
   line-height: 1.5;
   background-color: var(--bg-color);
+}
+.contact__form-title {
+  color: #fff;
 }
 .contact__details {
   display: grid;
@@ -656,7 +672,7 @@ html {
   margin-bottom: 1rem;
 }
 .form-group label {
-  color: var(--text-color);
+  color: #fff;
   font-size: 2rem;
   margin-bottom: 5px;
   font-weight: 500;
@@ -671,14 +687,14 @@ html {
 
 .footer {
   font-size: 1.5rem;
-  color: var(--text-color);
   grid-column: center-start/center-end;
+  color: #fff;
+  background-color: var(--accent-200);
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
   align-items: center;
   padding: 2rem;
   border-top: 1px solid var(--text-color);
-  background-color: var(--bg-color);
 }
 
 .experience {
