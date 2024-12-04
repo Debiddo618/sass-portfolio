@@ -19,15 +19,12 @@
         border-radius: 1rem;
         line-height: 1.5;
         background-color: var(--bg-color);
-        // background-color: red;
-
     }
 
     &__details{
         display: grid;
         grid-template-rows: repeat(2,min-content);
         color: var(--text-100);
-        // align-content: flex-start;
         gap: 2rem;
 
         &__description{
@@ -122,6 +119,9 @@
 }
 
 .result{
-    background-color: red;
+    // background-color: red;
+    color: var(--text-100);
+    font-size: $font-sm;
+    margin-top: $mb-sm;
 }
 
