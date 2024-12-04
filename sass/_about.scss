@@ -17,7 +17,6 @@
         width: 100%;
         max-width: 50rem;        
         border-radius: 50%;
-        box-shadow: $neon-light;
         animation: float ease 3s infinite;
     }
 
@@ -32,13 +31,13 @@
 
         &-title{
             font-size: $font-md;
-            color: $text-100;
+            color: var(--text-100);
             font-weight: 900;
             margin-bottom: $mb-sm;
         }
         &-description{
             font-size: $font-default;
-            color: $text-100;
+            color: var(--text-100);
             font-weight: 500;
             margin-bottom: $mb-lg;
         }

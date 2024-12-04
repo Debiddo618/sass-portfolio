@@ -1,3 +1,70 @@
+.title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--text-100);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--accent-200);
+  margin-bottom: 4.5rem;
+  text-transform: uppercase;
+}
+
+:root {
+  --primary-100: #d4eaf7;
+  --primary-200: #b6ccd8;
+  --primary-300: #3b3c3d;
+  --accent-100: #71c4ef;
+  --accent-200: #00668c;
+  --text-100: #1d1c1c;
+  --text-200: #313d44;
+  --bg-100: #fffefb;
+  --bg-200: #f5f4f1;
+  --bg-300: #cccbc8;
+  --text-color: #000;
+  --neon-light: "";
+}
+
+body.dark-theme {
+  --primary-100: #1F3A5F;
+  --primary-200: #4d648d;
+  --primary-300: #acc2ef;
+  --accent-100: #3D5A80;
+  --accent-200: #cee8ff;
+  --text-100: #FFFFFF;
+  --text-200: #e0e0e0;
+  --bg-100: #0F1C2E;
+  --bg-200: #1f2b3e;
+  --bg-300: #374357;
+  --text-color: #fff;
+}
+body.dark-theme .header-background {
+  width: 100%;
+  height: 100%;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background-image: linear-gradient(to right, rgba(15, 28, 46, 0.7), rgba(15, 28, 46, 0.7)), url("../img/trees.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative;
+}
+body.dark-theme .header-background:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 100%;
+  background-image: linear-gradient(to bottom, #0a1727, var(--bg-100));
+  margin-bottom: 1rem;
+}
+body.dark-theme .header__image, body.dark-theme .about__image, body.dark-theme .contact__details__icon, body.dark-theme .nav, body.dark-theme .btn {
+  box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -18,7 +85,7 @@ html {
   display: grid;
   grid-template-columns: [full-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
   grid-template-rows: 100vh min-content;
-  background-color: #0F1C2E;
+  background-color: var(--bg-100);
   overflow-x: hidden;
 }
 
@@ -26,23 +93,8 @@ html {
   grid-column: center-start/center-end;
 }
 
-.title {
-  font-size: 5rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  text-transform: uppercase;
-}
-
-.subtitle {
-  font-size: 2rem;
-  font-weight: 500;
-  color: #cee8ff;
-  margin-bottom: 4.5rem;
-  text-transform: uppercase;
-}
-
 .header {
-  background-color: #0F1C2E;
+  background-color: var(--bg-100);
   grid-column: center-start/center-end;
   grid-row: 1/2;
   display: grid;
@@ -55,7 +107,7 @@ html {
   margin-top: 7rem;
 }
 .header__hero {
-  color: #fff;
+  color: var(--text-color);
 }
 .header__intro {
   position: relative;
@@ -92,7 +144,6 @@ html {
   width: 100%;
   max-width: 50rem;
   border-radius: 50%;
-  box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
   animation: float ease 3s infinite;
 }
 
@@ -107,42 +158,20 @@ html {
     transform: translateY(0);
   }
 }
-.header-background {
-  width: 100%;
-  height: 100%;
-  grid-column: 1/-1;
-  grid-row: 1/2;
-  background-image: linear-gradient(to right, rgba(15, 28, 46, 0.7), rgba(15, 28, 46, 0.7)), url("../img/trees.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  position: relative;
-}
-.header-background:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  top: 100%;
-  background-image: linear-gradient(to bottom, #0a1727, #0F1C2E);
-  margin-bottom: 1rem;
-}
-
 .nav {
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: minmax(min-content, 1fr) 1fr minmax(min-content, 4fr) 1fr minmax(max-content, 1fr);
-  background-color: #0F1C2E;
+  background-color: var(--bg-300);
   padding: 2rem;
   font-size: 2.5rem;
   align-items: center;
   border-radius: 1rem;
   margin-top: 4rem;
-  color: #FFFFFF;
+  color: var(--text-100);
   position: relative;
   z-index: 1;
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
 }
 .nav__logo {
   cursor: pointer;
@@ -157,7 +186,7 @@ html {
 }
 .nav__link {
   text-decoration: none;
-  color: #FFFFFF;
+  color: var(--text-100);
   cursor: pointer;
 }
 .nav__buttons {
@@ -171,6 +200,14 @@ html {
 }
 .nav__theme-switcher {
   cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+}
+.nav__theme-switcher img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .btn {
@@ -179,14 +216,13 @@ html {
   padding: 1rem 2rem;
   border-radius: 2rem;
   border: none;
-  box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
-  color: #3D5A80;
-  background-color: #fff;
+  color: var(--accent-100);
+  background-color: var(--text-color);
   transition: all 0.2s;
 }
 .btn a {
   text-decoration: none;
-  color: #3D5A80;
+  color: var(--accent-100);
 }
 
 .btn:hover {
@@ -207,7 +243,6 @@ html {
   width: 100%;
   max-width: 50rem;
   border-radius: 50%;
-  box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
   animation: float ease 3s infinite;
 }
 .about-details {
@@ -218,13 +253,13 @@ html {
 }
 .about-details-title {
   font-size: 3.5rem;
-  color: #FFFFFF;
+  color: var(--text-100);
   font-weight: 900;
   margin-bottom: 1rem;
 }
 .about-details-description {
   font-size: 3rem;
-  color: #FFFFFF;
+  color: var(--text-100);
   font-weight: 500;
   margin-bottom: 4.5rem;
 }
@@ -245,7 +280,7 @@ html {
 
 .game-card {
   width: 50rem;
-  background-color: #1f2b3e;
+  background-color: var(--bg-200);
   padding: 3rem;
   border-radius: 1rem;
   height: 100%;
@@ -262,13 +297,13 @@ html {
 .game-card__title {
   font-size: 3rem;
   font-weight: 500;
-  color: #FFFFFF;
+  color: var(--text-100);
   margin-bottom: 1rem;
 }
 .game-card__description {
   font-size: 2rem;
   font-weight: 400;
-  color: #FFFFFF;
+  color: var(--text-100);
   margin-bottom: 1rem;
   height: 7rem;
 }
@@ -287,7 +322,7 @@ html {
 }
 
 .project__grid__title {
-  color: #fff;
+  color: var(--text-color);
   font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 2.5rem;
@@ -337,12 +372,12 @@ html {
   border-radius: 1rem;
 }
 .project-card__title {
-  color: #FFFFFF;
+  color: var(--text-100);
   font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 .project-card__skills {
-  color: #FFFFFF;
+  color: var(--text-100);
   font-size: 2rem;
   list-style: none;
 }
@@ -352,7 +387,7 @@ html {
   text-align: center;
   margin: 0 auto;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--text-color);
   font-weight: 500;
 }
 .project-card__skill {
@@ -362,7 +397,7 @@ html {
 }
 .project-card__description {
   font-size: 3rem;
-  color: #FFFFFF;
+  color: var(--text-100);
 }
 .project-card__links {
   margin-top: 2rem;
@@ -385,7 +420,7 @@ html {
 .sass__project {
   display: grid;
   grid-template-columns: 3fr minmax(min-content, 1fr);
-  color: #fff;
+  color: var(--text-color);
   gap: 3rem;
 }
 .sass__project__image {
@@ -436,12 +471,12 @@ html {
   margin-top: 2.5rem;
 }
 .mobile__projects__slide__title {
-  color: #fff;
+  color: var(--text-color);
   font-size: 3rem;
   margin-right: 3rem;
 }
 .mobile__projects__slide__description {
-  color: #fff;
+  color: var(--text-color);
   font-size: 2rem;
   text-align: center;
   margin-top: 2.5rem;
@@ -479,7 +514,7 @@ html {
   height: 7rem;
   min-width: 85rem;
   overflow: hidden;
-  background-color: #374357;
+  background-color: var(--bg-300);
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
@@ -522,6 +557,8 @@ html {
   }
 }
 .contact {
+  grid-column: center-start/center-end;
+  grid-row: 3/4;
   margin-bottom: 4.5rem;
 }
 .contact__grid {
@@ -535,16 +572,15 @@ html {
   justify-content: center;
   align-items: start;
   width: 100%;
-  background-color: #1f2b3e;
+  background-color: var(--bg-200);
   padding: 3rem;
   border-radius: 1rem;
   line-height: 1.5;
-  background-color: #0a1727;
 }
 .contact__details {
   display: grid;
   grid-template-rows: repeat(2, min-content);
-  color: #FFFFFF;
+  color: var(--text-100);
   gap: 2rem;
 }
 .contact__details__description {
@@ -554,10 +590,10 @@ html {
 }
 .contact__details__description a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
 }
 .contact__details__description a:hover {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--text-color);
 }
 .contact__details__socials__list {
   display: flex;
@@ -568,7 +604,7 @@ html {
 .contact__details__socials__list ion-icon {
   width: 3rem;
   height: 3rem;
-  fill: #fff;
+  fill: var(--text-color);
   margin-right: 1rem;
 }
 .contact__details--freelance, .contact__details--email, .contact__details--residence {
@@ -579,12 +615,11 @@ html {
   margin-bottom: 1rem;
 }
 .contact__details__icon {
-  box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
   padding: 1rem;
-  border: 1px solid #fff;
+  border: 1px solid var(--text-color);
 }
 .contact__details__icon ion-icon {
   width: 100%;
@@ -618,7 +653,7 @@ html {
   margin-bottom: 1rem;
 }
 .form-group label {
-  color: #fff;
+  color: var(--text-color);
   font-size: 2rem;
   margin-bottom: 5px;
   font-weight: 500;
@@ -631,18 +666,17 @@ html {
 
 .footer {
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--text-color);
   grid-column: center-start/center-end;
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
   align-items: center;
   padding: 2rem;
-  border-top: 1px solid #fff;
-  background-color: #0a1727;
+  border-top: 1px solid var(--text-color);
 }
 
 .experience {
-  color: #fff;
+  color: var(--text-color);
 }
 .experience__image {
   width: 5rem;
@@ -651,7 +685,7 @@ html {
   box-sizing: content-box;
   -o-object-fit: cover;
      object-fit: cover;
-  background-color: #374357;
+  background-color: var(--bg-300);
   position: absolute;
   top: 2rem;
   border-radius: 50%;
@@ -677,7 +711,7 @@ html {
   position: absolute;
   width: 6px;
   height: 100%;
-  background-color: #374357;
+  background-color: var(--bg-300);
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -705,7 +739,7 @@ html {
 }
 .experience__text-box {
   padding: 20px 30px;
-  background: #374357;
+  background: var(--bg-300);
   border-radius: 6px;
   font-size: 15px;
   position: relative;
@@ -718,7 +752,7 @@ html {
   z-index: 1;
   border-top: 1.5rem solid transparent;
   border-bottom: 1.5rem solid transparent;
-  border-left: 1.5rem solid #374357;
+  border-left: 1.5rem solid var(--bg-300);
   right: 0;
   transform: translateX(100%);
 }
@@ -730,7 +764,7 @@ html {
   z-index: 1;
   border-top: 1.5rem solid transparent;
   border-bottom: 1.5rem solid transparent;
-  border-right: 1.5rem solid #374357;
+  border-right: 1.5rem solid var(--bg-300);
   left: 0;
   transform: translateX(-100%);
 }

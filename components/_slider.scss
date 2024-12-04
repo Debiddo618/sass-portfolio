@@ -10,7 +10,7 @@ $slider-quantity:17;
     height: $slider-height;
     min-width: calc($slider-width*$slider-quantity);
     overflow: hidden;
-    background-color: $bg-300;
+    background-color: var(--bg-300);
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-bottom: $mb-sm;

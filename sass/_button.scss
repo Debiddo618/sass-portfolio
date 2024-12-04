@@ -4,14 +4,13 @@
     padding: 1rem 2rem;
     border-radius: 2rem;
     border: none;
-    box-shadow: $neon-light;
-    color: $accent-100;
-    background-color: $color-white;
+    color: var(--accent-100);
+    background-color: var(--text-color);
     transition: all 0.2s;
     
     a{
         text-decoration: none;
-        color: $accent-100;
+        color: var(--accent-100);
     }
 }
 

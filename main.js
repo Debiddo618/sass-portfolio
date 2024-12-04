@@ -236,3 +236,27 @@ form.addEventListener("submit", function (e) {
       }, 3000);
     });
 });
+
+// Theme Switcher
+const themeButton = document.querySelector(".nav__theme-switcher");
+
+const handleSwitchTheme = () => {
+  const img = themeButton.querySelector("img");
+  const body = document.body;
+
+  if (img.src.includes("sun.png")) {
+    img.src = "./img/moon.png";
+    img.alt = "dark";
+
+    // Add the 'dark-theme' class to the body
+    body.classList.add("dark-theme");
+  } else {
+    img.src = "./img/sun.png";
+    img.alt = "light";
+
+    // Remove the 'dark-theme' class from the body
+    body.classList.remove("dark-theme");
+  }
+};
+
+themeButton.addEventListener("click", handleSwitchTheme);

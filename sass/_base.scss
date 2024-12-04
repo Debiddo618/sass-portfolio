@@ -1,31 +1,89 @@
-// Color Variables
-
-$color-white:#fff;
-
 // dark theme
-$primary-100: #1F3A5F;
-$primary-200: #4d648d;
-$primary-300: #acc2ef;
-$accent-100: #3D5A80;
-$accent-200: #cee8ff;
-$text-100: #FFFFFF;
-$text-200: #e0e0e0;
-$bg-dark: #0a1727;
-$bg-100: #0F1C2E;
-$bg-200: #1f2b3e;
-$bg-300: #374357;
+$primary-100-dark: #1F3A5F;
+$primary-200-dark: #4d648d;
+$primary-300-dark: #acc2ef;
+$accent-100-dark: #3D5A80;
+$accent-200-dark: #cee8ff;
+$text-100-dark: #FFFFFF;
+$text-200-dark: #e0e0e0;
+// $bg-dark-dark: #0a1727;
+$bg-100-dark: #0F1C2E;
+$bg-200-dark: #1f2b3e;
+$bg-300-dark: #374357;
+$text-color-dark:#000;
 
-// box shadow
-$neon-light: 0 4px 30px rgba($bg-300, 0.1),0 4px 30px rgba($bg-300, 0.5), 0 4px 30px rgba($bg-300, 0.5);
 
-// fonts
-$font-default: 3rem;
-$font-sm:2rem;
-$font-md:3.5rem;
-$font-lg:4rem;
+// light theme
+$primary-100-light: #d4eaf7;
+$primary-200-light: #b6ccd8;
+$primary-300-light: #3b3c3d;
+$accent-100-light: #71c4ef;
+$accent-200-light: #00668c;
+$text-100-light: #1d1c1c;
+$text-200-light: #313d44;
+$bg-100-light: #fffefb;
+$bg-200-light: #f5f4f1;
+$bg-300-light: #cccbc8;  
+$text-color-light:#fff;
 
-$font-heading: 5rem;
-$font-subtitle: 2rem;
+
+
+:root{
+    --primary-100: #{$primary-100-light};
+    --primary-200: #{$primary-200-light};
+    --primary-300: #{$primary-300-light};
+    --accent-100: #{$accent-100-light};
+    --accent-200: #{$accent-200-light};
+    --text-100: #{$text-100-light};
+    --text-200: #{$text-200-light};
+    --bg-100: #{$bg-100-light};
+    --bg-200: #{$bg-200-light};
+    --bg-300: #{$bg-300-light};
+    --text-color: #{$text-color-dark};
+    --neon-light: "";
+}
+
+body.dark-theme {
+    --primary-100: #{$primary-100-dark};
+    --primary-200: #{$primary-200-dark};
+    --primary-300: #{$primary-300-dark};
+    --accent-100: #{$accent-100-dark};
+    --accent-200: #{$accent-200-dark};
+    --text-100: #{$text-100-dark};
+    --text-200: #{$text-200-dark};
+    --bg-100: #{$bg-100-dark};
+    --bg-200: #{$bg-200-dark};
+    --bg-300: #{$bg-300-dark};
+    --text-color: #{$text-color-light};
+    
+    .header-background{
+        width: 100%;
+        height: 100%;
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        background-image: linear-gradient(to right, rgba(#0F1C2E, .7), rgba(#0F1C2E, .7)), url('../img/trees.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        position: relative;
+    
+        &:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: 100%;
+            background-image: linear-gradient(to bottom,#0a1727,var(--bg-100));
+            margin-bottom: $mb-sm;
+        }
+    }
+
+    .header__image, .about__image, .contact__details__icon,.nav,.btn{
+        box-shadow: 0 4px 30px rgba(#374357, 0.1),0 4px 30px rgba(#374357, 0.5), 0 4px 30px rgba(#374357, 0.5);
+    }
+
+}
+
 
 
 
@@ -52,7 +110,7 @@ html{
     display: grid;
     grid-template-columns: [full-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 1fr [full-end];
     grid-template-rows: 100vh min-content;
-    background-color: $bg-100;
+    background-color: var(--bg-100);
     overflow-x: hidden;
 }
 

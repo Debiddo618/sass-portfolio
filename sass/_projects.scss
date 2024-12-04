@@ -16,7 +16,7 @@
 
 .project__grid{
     &__title{
-        color: $color-white;
+        color: var(--text-color);
         font-size: $font-md;
         font-weight: 900;
         margin-bottom: $mb-md;
@@ -77,12 +77,12 @@
     }
 
     &__title{
-        color: $text-100;
+        color: var(--text-100);
         font-size: $font-md;
         margin-bottom: $mb-sm;
     }
     &__skills{
-        color: $text-100;
+        color: var(--text-100);
         font-size: $font-sm;
         list-style: none;
 
@@ -92,7 +92,7 @@
             text-align: center;
             margin: 0 auto;
             margin-bottom: 1rem;
-            border-bottom: 1px solid $color-white;
+            border-bottom: 1px solid var(--text-color);
             font-weight: 500;
         }
 
@@ -106,7 +106,7 @@
 
     &__description{
         font-size: $font-default;
-        color: $text-100;
+        color: var(--text-100);
     }
 
     &__links{
@@ -134,7 +134,7 @@
 .sass__project{
     display: grid;
     grid-template-columns: 3fr minmax(min-content,1fr);
-    color: $color-white;
+    color: var(--text-color);
     gap: 3rem;
 
     &__image{
@@ -196,13 +196,13 @@
       }
   
       &__title {
-        color: $color-white;
+        color: var(--text-color);
         font-size: $font-default;
         margin-right: $mr-sm;
       }
 
       &__description{
-        color: $color-white;
+        color: var(--text-color);
         font-size: $font-sm;
         text-align: center;
         margin-top: $mb-md;

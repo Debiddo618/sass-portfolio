@@ -10,14 +10,14 @@ $mr-sm: 3rem;
 .title{
     font-size: $font-heading;
     font-weight: 700;
-    color: $text-100;
+    color: var(--text-100);
     text-transform: uppercase;
 }
 
 .subtitle{
     font-size: $font-subtitle;
     font-weight: 500;
-    color: $accent-200;
+    color: var(--accent-200);
     margin-bottom: $mb-lg;
     text-transform: uppercase;
 }
