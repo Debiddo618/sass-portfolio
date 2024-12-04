@@ -26,6 +26,7 @@
   --bg-300: #cccbc8;
   --text-color: #000;
   --neon-light: "";
+  --bg-color:$bg-light ;
 }
 
 body.dark-theme {
@@ -40,6 +41,7 @@ body.dark-theme {
   --bg-200: #1f2b3e;
   --bg-300: #374357;
   --text-color: #fff;
+  --bg-color:#0a1727;
 }
 body.dark-theme .header-background {
   width: 100%;
@@ -576,6 +578,7 @@ html {
   padding: 3rem;
   border-radius: 1rem;
   line-height: 1.5;
+  background-color: var(--bg-color);
 }
 .contact__details {
   display: grid;
@@ -673,6 +676,7 @@ html {
   align-items: center;
   padding: 2rem;
   border-top: 1px solid var(--text-color);
+  background-color: var(--bg-color);
 }
 
 .experience {
