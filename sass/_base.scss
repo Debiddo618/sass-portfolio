@@ -47,6 +47,7 @@ $text-color-light:#fff;
 $bp-largest: 87.5em; //1400px
 $bp-large: 81.25em; //1300px
 $bp-medium: 62.55em; //1000px
+$bp-small: 50em; //800px
 
 // dark theme
 body.dark-theme {
@@ -75,7 +76,6 @@ body.dark-theme {
         position: relative;
         background-color: transparent;
         clip-path:none;
-
     
         &:before{
             content: "";
@@ -180,6 +180,12 @@ html{
     grid-template-columns: [full-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 1fr [full-end];
     grid-template-rows: 100vh min-content;
     background-color: var(--bg-100);
+
+
+    @media only screen and (max-width:$bp-small){
+        grid-template-rows: minmax(75vh,1fr) min-content;
+
+    }
     
 }
 

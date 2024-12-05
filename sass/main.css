@@ -131,6 +131,11 @@ html {
   grid-template-rows: 100vh min-content;
   background-color: var(--bg-100);
 }
+@media only screen and (max-width: 50em) {
+  .container {
+    grid-template-rows: minmax(75vh, 1fr) min-content;
+  }
+}
 
 .main {
   grid-column: center-start/center-end;
@@ -154,6 +159,14 @@ html {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 50em) {
+  .header {
+    grid-template-columns: minmax(min-content, 1fr);
+    grid-template-rows: repeat(2, minmax(min-content, 1fr));
+    gap: 0px;
+    justify-content: flex-start;
+  }
+}
 .header > * {
   padding: 2rem;
   margin-top: 7rem;
@@ -164,6 +177,12 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 50em) {
+  .header__hero {
+    min-height: -moz-min-content;
+    min-height: min-content;
+  }
 }
 .header__intro {
   position: relative;
@@ -194,6 +213,11 @@ html {
   justify-content: center;
   align-items: flex-start;
 }
+@media only screen and (max-width: 50em) {
+  .header__pictures {
+    grid-row: 1/2;
+  }
+}
 .header__image {
   z-index: 1;
   display: block;
@@ -201,6 +225,11 @@ html {
   max-width: 50rem;
   border-radius: 50%;
   animation: float ease 3s infinite;
+}
+@media only screen and (max-width: 50em) {
+  .header__image {
+    max-width: 30rem;
+  }
 }
 
 @keyframes float {
