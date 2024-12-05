@@ -287,6 +287,7 @@ html {
 
 .btn:hover {
   transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 .about {
@@ -400,32 +401,32 @@ html {
   position: relative;
   transition: all 0.5s;
 }
-.project-card--face1 {
+.project-card--inner {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.5s;
-  z-index: 10;
+  height: 35rem;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  margin-bottom: 4.5rem;
 }
-.project-card--face2 {
+.project-card--face1, .project-card--face2 {
   position: absolute;
   width: 100%;
-  transform: translateY(-25rem);
-  transition: all 0.5s;
-  z-index: -1;
-  opacity: 0;
-  top: 0;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.project-card--face2 {
   display: grid;
   grid-template-columns: minmax(min-content, 2fr) minmax(min-content, 1fr);
   justify-items: center;
+  transform: rotateY(180deg);
+  border: 1px solid var(--text-color);
+  border-radius: 1rem;
+  padding: 2rem;
 }
-.project-card:hover .project-card--face2 {
-  position: relative;
-  top: 100%;
-  transform: translateY(0);
-  opacity: 1;
+.project-card:hover .project-card--inner {
+  transform: rotateY(180deg);
 }
 .project-card__image {
   width: 100%;

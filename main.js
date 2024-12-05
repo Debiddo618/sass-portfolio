@@ -86,27 +86,30 @@ document.addEventListener("DOMContentLoaded", () => {
     projectCard.classList.add("project-card");
 
     projectCard.innerHTML = `
-    <div class="project-card--face1">
-      <img src="${getImageUrl(project.imageSrc)}" alt="${
-      project.title
-    }" class="project-card__image">
-      <h3 class="project-card__title">${project.title}</h3>
-    </div>
-    <div class="project-card--face2">
-      <p class="project-card__description">${project.description}</p>
-      <ul class="project-card__skills">
-        <div class="project-card__skills-title">Skills</div>
-        ${project.skills
-          .map((skill) => `<li class="project-card__skill">${skill}</li>`)
-          .join("")}
-      </ul>
-      <div class="project-card__links">
-        <a href="${
-          project.demo
-        }" target="_blank" class="project-card__link--demo btn">Live</a>
-        <a href="${
-          project.source
-        }" target="_blank" class="project-card__link--source btn">Source</a>
+
+    <div class="project-card--inner">
+      <div class="project-card--face1">
+        <img src="${getImageUrl(project.imageSrc)}" alt="${
+        project.title
+      }" class="project-card__image">
+        <h3 class="project-card__title">${project.title}</h3>
+      </div>
+      <div class="project-card--face2">
+        <p class="project-card__description">${project.description}</p>
+        <ul class="project-card__skills">
+          <div class="project-card__skills-title">Skills</div>
+          ${project.skills
+            .map((skill) => `<li class="project-card__skill">${skill}</li>`)
+            .join("")}
+        </ul>
+        <div class="project-card__links">
+          <a href="${
+            project.demo
+          }" target="_blank" class="project-card__link--demo btn">Live</a>
+          <a href="${
+            project.source
+          }" target="_blank" class="project-card__link--source btn">Source</a>
+        </div>
       </div>
     </div>
   `;
