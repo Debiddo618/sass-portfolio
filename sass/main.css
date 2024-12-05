@@ -214,7 +214,8 @@ html {
   z-index: 1000;
 }
 .nav.scrolled {
-  animation: expand 1s forwards;
+  animation: expand 0.2s forwards;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 @keyframes expand {
   100% {
@@ -226,6 +227,15 @@ html {
 .nav__logo {
   cursor: pointer;
   grid-column: 1/2;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.nav__logo__image {
+  width: 8rem;
+  position: absolute;
 }
 .nav__links {
   display: flex;
@@ -610,7 +620,7 @@ html {
 }
 .contact {
   grid-column: center-start/center-end;
-  grid-row: 3/4;
+  grid-row: 4/5;
   margin-bottom: 4.5rem;
 }
 .contact__grid {

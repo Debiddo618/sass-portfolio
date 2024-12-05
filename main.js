@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Navbar
   const nav = document.querySelector(".nav");
   const scrollThreshold = 100;
-  
+
   window.addEventListener("scroll", function () {
     if (window.scrollY > scrollThreshold) {
       nav.classList.add("scrolled");
@@ -250,20 +250,24 @@ form.addEventListener("submit", function (e) {
 
 // Theme Switcher
 const themeButton = document.querySelector(".nav__theme-switcher");
+const navLogo = document.querySelector(".nav__logo__image");
 
 const handleSwitchTheme = () => {
   const img = themeButton.querySelector("img");
   const body = document.body;
 
-  if (img.src.includes("sun.png")) {
-    img.src = "./img/moon.png";
-    img.alt = "dark";
+  if (img.src.includes("moon.png")) {
+    img.src = "./img/sun.png";
+    img.alt = "light";
+    navLogo.src = "./img/ZDark.svg";
 
     // Add the 'dark-theme' class to the body
     body.classList.add("dark-theme");
   } else {
-    img.src = "./img/sun.png";
-    img.alt = "light";
+    img.src = "./img/moon.png";
+    img.alt = "dark";
+    navLogo.src = "./img/ZLight.svg";
+
 
     // Remove the 'dark-theme' class from the body
     body.classList.remove("dark-theme");

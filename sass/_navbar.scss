@@ -18,7 +18,9 @@
     z-index: 1000;  
     
     &.scrolled{
-        animation: expand 1s forwards;
+        animation: expand .2s forwards;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
     }
 
     @keyframes expand {
@@ -35,7 +37,18 @@
     &__logo{
         cursor: pointer;
         grid-column: 1/2;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &__image{
+            width: 8rem;
+            position: absolute;
+        }
     }
+
 
     &__links{
         display: flex;
