@@ -372,6 +372,15 @@ html {
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
   gap: 3rem;
 }
+@media only screen and (max-width: 50em) {
+  .about__grid {
+    grid-template-columns: minmax(min-content, 1fr);
+  }
+}
+.about__pictures {
+  display: flex;
+  justify-content: center;
+}
 .about__image {
   z-index: 1;
   display: block;
@@ -379,6 +388,11 @@ html {
   max-width: 50rem;
   border-radius: 50%;
   animation: float ease 3s infinite;
+}
+@media only screen and (max-width: 50em) {
+  .about__image {
+    max-width: 30rem;
+  }
 }
 .about-details {
   display: flex;
