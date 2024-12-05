@@ -1,31 +1,42 @@
 .projects{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min-content,1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content,1fr));
 
-    &__title{}
-    &__subtitle{
-    }
+  &__title{}
+  &__subtitle{
+  }
 }
 
 .projects__grid{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(min-content,1fr));
-    grid-template-rows: repeat(2, minmax(min-content,1fr));
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content,1fr));
+  grid-template-rows: repeat(2, minmax(min-content,1fr));
+
+  @media only screen and (max-width:$bp-small){
+    display: flex;
+    flex-direction: column;
+    gap: $grid-gap;
+  }
 
 }
 
 .project__grid{
     &__title{
-        color: var(--text-color);
-        font-size: $font-md;
-        font-weight: 900;
-        margin-bottom: $mb-md;
-        text-align: center;
+      color: var(--text-color);
+      font-size: $font-md;
+      font-weight: 900;
+      margin-bottom: $mb-md;
+      text-align: center;
     }
     &--web{
-        grid-row: 1/-1;
-        display: grid;
-        grid-template-rows: (4, 20rem);
+      grid-row: 1/-1;
+      display: grid;
+      @media only screen and (max-width:$bp-small){
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+      }
+
     }
     &--mobile{
 
@@ -40,6 +51,11 @@
     align-self: start;
     position: relative;
     transition: all 0.5s;
+    @media only screen and (max-width:$bp-small){
+      width: 75%;
+      align-self: center;
+    }
+
 
     &--inner{
       position: relative;
@@ -49,6 +65,12 @@
       transition: transform 0.8s;
       transform-style: preserve-3d;
       margin-bottom: $mb-lg;
+
+      @media only screen and (max-width:$bp-small){
+        height: 50rem;
+      }
+      
+      
     }
 
     &--face1, &--face2{
@@ -75,8 +97,14 @@
     }
 
     &__image{
-        width: 100%;
-        border-radius: 1rem;
+      width: 100%;
+      border-radius: 1rem;
+
+      @media only screen and (max-width:$bp-small){
+        height: 100%;
+        object-fit: cover;
+
+      }
     }
 
     &__title{
@@ -140,24 +168,47 @@
     color: var(--text-color);
     gap: 3rem;
 
-    &__image{
-        display: block;
+    @media only screen and (max-width:$bp-small){
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-        width: 100%;
-        border-radius: 1rem;
+    &__image{
+      display: block;
+      width: 100%;
+      border-radius: 1rem;
+      @media only screen and (max-width:$bp-small){
+        width: 75%;
+      }
+    }
+
+    &__details{
+      @media only screen and (max-width:$bp-small){
+        width: 75%;
+        position: relative;
+      }
     }
 
     &__title{
-        font-size: $font-default;
+      font-size: $font-default;
     }
     &__description{
-        font-size: $font-sm;
-        line-height: 1.25;
-        margin-bottom: $mb-sm;
+      font-size: $font-sm;
+      line-height: 1.25;
+      margin-bottom: $mb-sm;
+        
     }
 
     &__links{
-        display: flex;
+      display: flex;
+      @media only screen and (max-width:$bp-small){
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
     }
 }
 

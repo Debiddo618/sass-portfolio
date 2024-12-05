@@ -479,6 +479,13 @@ html {
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
   grid-template-rows: repeat(2, minmax(min-content, 1fr));
 }
+@media only screen and (max-width: 50em) {
+  .projects__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
 
 .project__grid__title {
   color: var(--text-color);
@@ -490,7 +497,13 @@ html {
 .project__grid--web {
   grid-row: 1/-1;
   display: grid;
-  grid-template-rows: 4, 20rem;
+}
+@media only screen and (max-width: 50em) {
+  .project__grid--web {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
 }
 .project-card {
   margin-bottom: 4.5rem;
@@ -498,6 +511,12 @@ html {
   align-self: start;
   position: relative;
   transition: all 0.5s;
+}
+@media only screen and (max-width: 50em) {
+  .project-card {
+    width: 75%;
+    align-self: center;
+  }
 }
 .project-card--inner {
   position: relative;
@@ -507,6 +526,11 @@ html {
   transition: transform 0.8s;
   transform-style: preserve-3d;
   margin-bottom: 4.5rem;
+}
+@media only screen and (max-width: 50em) {
+  .project-card--inner {
+    height: 50rem;
+  }
 }
 .project-card--face1, .project-card--face2 {
   position: absolute;
@@ -529,6 +553,13 @@ html {
 .project-card__image {
   width: 100%;
   border-radius: 1rem;
+}
+@media only screen and (max-width: 50em) {
+  .project-card__image {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 .project-card__title {
   color: var(--text-100);
@@ -582,10 +613,29 @@ html {
   color: var(--text-color);
   gap: 3rem;
 }
+@media only screen and (max-width: 50em) {
+  .sass__project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .sass__project__image {
   display: block;
   width: 100%;
   border-radius: 1rem;
+}
+@media only screen and (max-width: 50em) {
+  .sass__project__image {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .sass__project__details {
+    width: 75%;
+    position: relative;
+  }
 }
 .sass__project__title {
   font-size: 3rem;
@@ -597,6 +647,14 @@ html {
 }
 .sass__project__links {
   display: flex;
+}
+@media only screen and (max-width: 50em) {
+  .sass__project__links {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
 }
 
 .mobile__projects__slider-wrapper {
