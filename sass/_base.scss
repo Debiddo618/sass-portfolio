@@ -27,8 +27,6 @@ $bg-200-light: #f5f4f1;
 $bg-300-light: #fff;  
 $text-color-light:#fff;
 
-
-
 :root{
     --primary-100: #{$primary-100-light};
     --primary-200: #{$primary-200-light};
@@ -44,6 +42,11 @@ $text-color-light:#fff;
     --neon-light: "";
     --bg-color:#{$bg-light};
 }
+
+// breakpoints
+$bp-largest: 87.5em; //1400px
+$bp-large: 81.25em; //1300px
+$bp-medium: 62.55em; //1000px
 
 // dark theme
 body.dark-theme {
@@ -145,9 +148,6 @@ body.dark-theme {
 
 }
 
-
-
-
 // grid
 $grid-gap: 3rem;
 
@@ -164,6 +164,14 @@ body{
 html{
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 16px
+
+    @media only screen and (max-width:$bp-largest){
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width:$bp-medium){
+        font-size: 37.5%;
+    }
 }
 
 .container{
@@ -172,9 +180,15 @@ html{
     grid-template-columns: [full-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 1fr [full-end];
     grid-template-rows: 100vh min-content;
     background-color: var(--bg-100);
+    
 }
 
-.main, .nav-wrapper{
+.main{
     grid-column: center-start/center-end;
     position: relative;
+
+    @media only screen and (max-width:$bp-large){
+        grid-column: full-start/full-end;
+        padding: 3rem;
+    }
 }

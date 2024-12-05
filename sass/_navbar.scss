@@ -12,10 +12,16 @@
     left: 50%;
     transform: translateX(-50%);
     width: 85%;
-
     position: fixed;
     top: 0;
     z-index: 1000;  
+
+    @media only screen and (max-width:$bp-large){
+        width: 100%;
+        border-radius: 0px;
+        margin-top: 0;
+        grid-template-columns: minmax(min-content,1fr) 1fr minmax(min-content,4fr) 1fr minmax(max-content,2fr);
+    }
     
     &.scrolled{
         animation: expand .2s forwards;
@@ -45,6 +51,10 @@
         &__image{
             width: 8rem;
             position: absolute;
+
+            @media only screen and (max-width:$bp-large){
+                width: 6rem;
+            }
         }
     }
 
@@ -81,9 +91,12 @@
 
     &__buttons{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         grid-column: 5/6;
+        @media only screen and (max-width:$bp-large){
+            justify-content: flex-start;
+        }        
     }
 
     &__cta{

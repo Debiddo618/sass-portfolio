@@ -15,6 +15,13 @@
     justify-content: space-between;
     gap: $grid-gap;
     margin-bottom: $mb-sm;
+    @media only screen and (max-width:$bp-large){
+        justify-content: space-evenly;
+    }
+    @media only screen and (max-width:$bp-medium){
+        grid-template-columns: repeat(auto-fit,minmax(min-content, 55rem));
+
+    }
 }
 
 .game-card{

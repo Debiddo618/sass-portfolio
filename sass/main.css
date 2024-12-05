@@ -113,6 +113,16 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+@media only screen and (max-width: 87.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 62.55em) {
+  html {
+    font-size: 37.5%;
+  }
+}
 
 .container {
   position: relative;
@@ -122,9 +132,15 @@ html {
   background-color: var(--bg-100);
 }
 
-.main, .nav-wrapper {
+.main {
   grid-column: center-start/center-end;
   position: relative;
+}
+@media only screen and (max-width: 81.25em) {
+  .main {
+    grid-column: full-start/full-end;
+    padding: 3rem;
+  }
 }
 
 .header {
@@ -216,6 +232,14 @@ html {
   top: 0;
   z-index: 1000;
 }
+@media only screen and (max-width: 81.25em) {
+  .nav {
+    width: 100%;
+    border-radius: 0px;
+    margin-top: 0;
+    grid-template-columns: minmax(min-content, 1fr) 1fr minmax(min-content, 4fr) 1fr minmax(max-content, 2fr);
+  }
+}
 .nav.scrolled {
   animation: expand 0.2s forwards;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -238,6 +262,11 @@ html {
 .nav__logo__image {
   width: 8rem;
   position: absolute;
+}
+@media only screen and (max-width: 81.25em) {
+  .nav__logo__image {
+    width: 6rem;
+  }
 }
 .nav__links {
   display: flex;
@@ -262,9 +291,14 @@ html {
 }
 .nav__buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   grid-column: 5/6;
+}
+@media only screen and (max-width: 81.25em) {
+  .nav__buttons {
+    justify-content: flex-start;
+  }
 }
 .nav__cta {
   margin-right: 1rem;
@@ -348,6 +382,16 @@ html {
   justify-content: space-between;
   gap: 3rem;
   margin-bottom: 1rem;
+}
+@media only screen and (max-width: 81.25em) {
+  .games__grid {
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (max-width: 62.55em) {
+  .games__grid {
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 55rem));
+  }
 }
 
 .game-card {
@@ -635,6 +679,12 @@ html {
   grid-row: 4/5;
   margin-bottom: 4.5rem;
 }
+@media only screen and (max-width: 81.25em) {
+  .contact {
+    grid-column: full-start/full-end;
+    padding: 3rem;
+  }
+}
 .contact__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
@@ -750,6 +800,7 @@ html {
 .footer {
   font-size: 1.5rem;
   grid-column: center-start/center-end;
+  grid-row: 5/6;
   color: #fff;
   background-color: var(--accent-200);
   display: grid;
@@ -757,6 +808,12 @@ html {
   align-items: center;
   padding: 2rem;
   border-top: 1px solid var(--text-color);
+}
+@media only screen and (max-width: 81.25em) {
+  .footer {
+    grid-column: full-start/full-end;
+    padding: 3rem;
+  }
 }
 
 .experience {

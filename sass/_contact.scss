@@ -2,6 +2,12 @@
     grid-column: center-start/center-end;
     grid-row: 4/5;
     margin-bottom: $mb-lg;
+
+    @media only screen and (max-width:$bp-large){
+        grid-column: full-start/full-end;
+        padding: 3rem;
+    }
+
     &__grid{
         display: grid;
         grid-template-columns: repeat(2,minmax(min-content,1fr));
