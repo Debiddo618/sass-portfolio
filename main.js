@@ -339,7 +339,7 @@ document
   .querySelector(".about-details-resume")
   .addEventListener("click", function () {
     const link = document.createElement("a");
-    link.href = "./data/David_Zheng_Resume.pdf";
+    link.href = "/David_Zheng_Resume.pdf";
     link.download = "resume.pdf";
     link.click();
   });
