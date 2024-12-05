@@ -28,8 +28,15 @@ function createSkillSlider(skillsData, containerSelector) {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Navbar
+  const sections = document.querySelectorAll("section");
   const nav = document.querySelector(".nav");
   const scrollThreshold = 100;
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2,
+  };
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > scrollThreshold) {
@@ -38,6 +45,55 @@ document.addEventListener("DOMContentLoaded", () => {
       nav.classList.remove("scrolled");
     }
   });
+
+  const links = document.querySelectorAll(".nav__link");
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      const sectionId = entry.target.getAttribute("id");
+      const navLink = document.querySelector(
+        `.nav__link[href="#${sectionId}"]`
+      );
+
+      if (entry.isIntersecting) {
+        links.forEach((link) => link.classList.remove("active"));
+        navLink.classList.add("active");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  sections.forEach((section) => observer.observe(section));
+
+  // Function to remove active class from all links
+  function removeActiveClasses() {
+    links.forEach((link) => {
+      link.classList.remove("active");
+    });
+  }
+
+  // Function to add active class to the current link
+  function addActiveClass(link) {
+    removeActiveClasses();
+    link.classList.add("active");
+  }
+
+  // Add event listeners to all links
+  links.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      addActiveClass(event.target);
+    });
+  });
+
+  // Highlight the link that corresponds to the current URL
+  const currentPath = window.location.pathname;
+  links.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+
   // Experience
   const experienceTimeline = document.querySelector(".experience__timeline");
   historyData.forEach((experience, index) => {
@@ -90,8 +146,8 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="project-card--inner">
       <div class="project-card--face1">
         <img src="${getImageUrl(project.imageSrc)}" alt="${
-        project.title
-      }" class="project-card__image">
+      project.title
+    }" class="project-card__image">
         <h3 class="project-card__title">${project.title}</h3>
       </div>
       <div class="project-card--face2">
@@ -270,7 +326,6 @@ const handleSwitchTheme = () => {
     img.src = "./img/moon.png";
     img.alt = "dark";
     navLogo.src = "./img/ZLight.svg";
-
 
     // Remove the 'dark-theme' class from the body
     body.classList.remove("dark-theme");

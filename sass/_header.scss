@@ -16,6 +16,14 @@
         margin-top: 7rem;
     }
 
+    &-background{
+        // width: 100%;
+        // height: 100%;
+        // grid-column: 1/-1;
+        // grid-row: 1/2;
+        // background-color: var(--accent-200);
+    }
+
     &__hero{
         color: var(--text-color);
         min-height: 100vh;
@@ -71,8 +79,6 @@
         border-radius: 50%;
         animation: float ease 3s infinite;
     }
-
-
 }
 @keyframes float {
     0% {

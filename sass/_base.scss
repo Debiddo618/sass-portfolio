@@ -66,10 +66,13 @@ body.dark-theme {
         grid-column: 1/-1;
         grid-row: 1/2;
         background-image: linear-gradient(to right, rgba(#0F1C2E, .7), rgba(#0F1C2E, .7)), url('../img/trees.png');
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
         position: relative;
+        background-color: transparent;
+        clip-path:none;
+
     
         &:before{
             content: "";
