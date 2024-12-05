@@ -721,6 +721,7 @@ html {
   grid-column: center-start/center-end;
   grid-row: 4/5;
   margin-bottom: 4.5rem;
+  position: relative;
 }
 @media only screen and (max-width: 81.25em) {
   .contact {
@@ -732,6 +733,11 @@ html {
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
   gap: 3rem;
+}
+@media only screen and (max-width: 50em) {
+  .contact__grid {
+    grid-template-columns: minmax(min-content, 1fr);
+  }
 }
 .contact__form {
   display: flex;
@@ -769,6 +775,12 @@ html {
 .contact__details__description a:hover {
   border-bottom: 1px solid var(--text-color);
 }
+@media only screen and (max-width: 50em) {
+  .contact__details__info {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
 .contact__details__socials__list {
   display: flex;
   text-decoration: none;
@@ -780,6 +792,12 @@ html {
   height: 3rem;
   fill: var(--accent-200);
   margin-right: 1rem;
+}
+@media only screen and (max-width: 50em) {
+  .contact__details__socials__list {
+    position: absolute;
+    bottom: -2rem;
+  }
 }
 .contact__details--freelance, .contact__details--email, .contact__details--residence {
   display: grid;
