@@ -978,11 +978,21 @@ html {
   z-index: -1;
   animation: moveline 2s linear forwards;
 }
+@media only screen and (max-width: 50em) {
+  .experience__timeline::after {
+    left: 5%;
+  }
+}
 .experience__container {
   padding: 1rem 5rem;
   position: relative;
   width: 50%;
   color: #fff;
+}
+@media only screen and (max-width: 50em) {
+  .experience__container {
+    width: 100%;
+  }
 }
 .experience__container--left {
   left: 0;
@@ -991,12 +1001,30 @@ html {
   right: 0;
   transform: translateX(50%);
 }
+@media only screen and (max-width: 50em) {
+  .experience__container--left {
+    left: 5%;
+  }
+  .experience__container--left img {
+    left: 0;
+    transform: translateX(-50%);
+  }
+}
 .experience__container--right {
   left: 50%;
 }
 .experience__container--right img {
   left: 0;
   transform: translateX(-50%);
+}
+@media only screen and (max-width: 50em) {
+  .experience__container--right {
+    left: 5%;
+  }
+  .experience__container--right img {
+    left: 0;
+    transform: translateX(-50%);
+  }
 }
 .experience__text-box {
   padding: 20px 30px;
@@ -1016,6 +1044,14 @@ html {
   border-left: 1.5rem solid var(--accent-200);
   right: 0;
   transform: translateX(100%);
+}
+@media only screen and (max-width: 50em) {
+  .experience__left-container-arrow {
+    left: 0;
+    border-right: 1.5rem solid var(--bg-300);
+    border-left: none;
+    transform: translateX(-100%);
+  }
 }
 .experience__right-container-arrow {
   height: 0;
