@@ -27,6 +27,17 @@ function createSkillSlider(skillsData, containerSelector) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Navbar
+  const nav = document.querySelector(".nav");
+  const scrollThreshold = 100;
+  
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > scrollThreshold) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
   // Experience
   const experienceTimeline = document.querySelector(".experience__timeline");
   historyData.forEach((experience, index) => {

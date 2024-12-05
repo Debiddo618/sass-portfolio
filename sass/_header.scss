@@ -7,6 +7,9 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: min-content 1fr;
     gap: $grid-gap;
+    align-items: center;
+    justify-content: center;
+
 
     & > * {
         padding: 2rem;
@@ -15,11 +18,16 @@
 
     &__hero{
         color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__intro{
         position: relative;
         z-index: 1;
+
 
         &--start{
             font-size: $font-default;

@@ -66,12 +66,20 @@ body.dark-theme .header-background:before {
 body.dark-theme .header__image, body.dark-theme .about__image, body.dark-theme .contact__details__icon, body.dark-theme .nav, body.dark-theme .btn {
   box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
 }
-body.dark-theme .btn {
-  background-color: #fff;
-  color: #000;
+body.dark-theme .experience__image {
+  background-color: var(--bg-300);
 }
-body.dark-theme .btn a {
-  color: #000;
+body.dark-theme .experience__timeline::after {
+  background-color: var(--bg-300);
+}
+body.dark-theme .experience__text-box {
+  background: var(--bg-300);
+}
+body.dark-theme .experience__left-container-arrow {
+  border-left: 1.5rem solid var(--bg-300);
+}
+body.dark-theme .experience__right-container-arrow {
+  border-right: 1.5rem solid var(--bg-300);
 }
 body.dark-theme .form-group label {
   color: var(--text-color);
@@ -79,6 +87,13 @@ body.dark-theme .form-group label {
 body.dark-theme .footer {
   color: var(--text-color);
   background-color: var(--bg-color);
+}
+body.dark-theme .btn {
+  background-color: #fff;
+  color: #000;
+}
+body.dark-theme .btn a {
+  color: #000;
 }
 
 *, *::before, *::after {
@@ -102,11 +117,11 @@ html {
   grid-template-columns: [full-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
   grid-template-rows: 100vh min-content;
   background-color: var(--bg-100);
-  overflow-x: hidden;
 }
 
-.main {
+.main, .nav-wrapper {
   grid-column: center-start/center-end;
+  position: relative;
 }
 
 .header {
@@ -117,6 +132,8 @@ html {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: min-content 1fr;
   gap: 3rem;
+  align-items: center;
+  justify-content: center;
 }
 .header > * {
   padding: 2rem;
@@ -124,6 +141,10 @@ html {
 }
 .header__hero {
   color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header__intro {
   position: relative;
@@ -175,7 +196,6 @@ html {
   }
 }
 .nav {
-  grid-column: 1/-1;
   display: grid;
   grid-template-columns: minmax(min-content, 1fr) 1fr minmax(min-content, 4fr) 1fr minmax(max-content, 1fr);
   background-color: var(--bg-300);
@@ -185,9 +205,23 @@ html {
   border-radius: 1rem;
   margin-top: 4rem;
   color: var(--text-100);
-  position: relative;
-  z-index: 1;
-  border-radius: 16px;
+  border-radius: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.nav.scrolled {
+  animation: expand 1s forwards;
+}
+@keyframes expand {
+  100% {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0px;
+  }
 }
 .nav__logo {
   cursor: pointer;
@@ -506,15 +540,17 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--accent-200);
+  opacity: 0.8;
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
   z-index: 10;
+  transition: all 0.02s;
 }
 .mobile__projects__prev:hover, .mobile__projects__next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
 }
 .mobile__projects__prev {
   left: 10px;
@@ -596,6 +632,10 @@ html {
 .contact__form-title {
   color: #fff;
 }
+.contact__form__btn {
+  background-color: #fff;
+  color: #00668c;
+}
 .contact__details {
   display: grid;
   grid-template-rows: repeat(2, min-content);
@@ -623,7 +663,7 @@ html {
 .contact__details__socials__list ion-icon {
   width: 3rem;
   height: 3rem;
-  fill: var(--text-color);
+  fill: var(--accent-200);
   margin-right: 1rem;
 }
 .contact__details--freelance, .contact__details--email, .contact__details--residence {
@@ -643,7 +683,7 @@ html {
 .contact__details__icon ion-icon {
   width: 100%;
   height: 100%;
-  fill: inherit;
+  fill: var(--accent-200);
 }
 .contact__details-title {
   font-size: 3rem;
@@ -707,7 +747,7 @@ html {
   box-sizing: content-box;
   -o-object-fit: cover;
      object-fit: cover;
-  background-color: var(--bg-300);
+  background-color: var(--accent-200);
   position: absolute;
   top: 2rem;
   border-radius: 50%;
@@ -733,7 +773,7 @@ html {
   position: absolute;
   width: 6px;
   height: 100%;
-  background-color: var(--bg-300);
+  background-color: var(--accent-200);
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -744,6 +784,7 @@ html {
   padding: 1rem 5rem;
   position: relative;
   width: 50%;
+  color: #fff;
 }
 .experience__container--left {
   left: 0;
@@ -761,7 +802,7 @@ html {
 }
 .experience__text-box {
   padding: 20px 30px;
-  background: var(--bg-300);
+  background: var(--accent-200);
   border-radius: 6px;
   font-size: 15px;
   position: relative;
@@ -774,7 +815,7 @@ html {
   z-index: 1;
   border-top: 1.5rem solid transparent;
   border-bottom: 1.5rem solid transparent;
-  border-left: 1.5rem solid var(--bg-300);
+  border-left: 1.5rem solid var(--accent-200);
   right: 0;
   transform: translateX(100%);
 }
@@ -786,7 +827,7 @@ html {
   z-index: 1;
   border-top: 1.5rem solid transparent;
   border-bottom: 1.5rem solid transparent;
-  border-right: 1.5rem solid var(--bg-300);
+  border-right: 1.5rem solid var(--accent-200);
   left: 0;
   transform: translateX(-100%);
 }

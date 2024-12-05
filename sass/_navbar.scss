@@ -1,6 +1,4 @@
 .nav{
-    grid-column: 1/-1;
-
     display: grid;
     grid-template-columns: minmax(min-content,1fr) 1fr minmax(min-content,4fr) 1fr minmax(max-content,1fr) ;
     background-color: var(--bg-300);
@@ -10,11 +8,30 @@
     border-radius: 1rem;
     margin-top: 4rem;
     color: var(--text-100);
+    border-radius: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
 
-    position: relative;
-    z-index: 1;
+    position: fixed;
+    top: 0;
+    z-index: 1000;  
+    
+    &.scrolled{
+        animation: expand 1s forwards;
+    }
 
-    border-radius: 16px;
+    @keyframes expand {
+        0% {
+        }
+        100% {
+            width: 100%;
+            margin-top: 0;
+            border-radius: 0px;
+        }
+    }
+    
+
     &__logo{
         cursor: pointer;
         grid-column: 1/2;

@@ -224,15 +224,17 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: var(--accent-200);
+      opacity: .8;
       color: white;
       border: none;
       padding: 10px;
       cursor: pointer;
       z-index: 10;
+      transition: all .02s;
   
       &:hover {
-        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 1;
       }
     }
   

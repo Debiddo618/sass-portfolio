@@ -86,15 +86,32 @@ body.dark-theme {
         box-shadow: 0 4px 30px rgba(#374357, 0.1),0 4px 30px rgba(#374357, 0.5), 0 4px 30px rgba(#374357, 0.5);
     }
 
-    // buttons
-    .btn {
-        background-color: #fff;
-        color: #000;
+    // experience
+    .experience{
+        &__image{
+            background-color: var(--bg-300);
+        }
+
+        &__timeline{
+            &::after{
+                background-color: var(--bg-300);
+            }
+        }
+
+        &__text-box{
+            background: var(--bg-300);
+        }
+
+        &__left-container-arrow{
+            border-left: 1.5rem solid var(--bg-300);
+        }
+        &__right-container-arrow{
+            border-right: 1.5rem solid var(--bg-300);
+        }
     }
 
-    .btn a{
-        color: #000;
-    }
+    // projects
+
 
     // contact
     .contact{
@@ -111,6 +128,16 @@ body.dark-theme {
     .footer{
         color: var(--text-color);
         background-color: var(--bg-color);
+    }
+
+    // buttons
+    .btn {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .btn a{
+        color: #000;
     }
 
 }
@@ -142,9 +169,9 @@ html{
     grid-template-columns: [full-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 1fr [full-end];
     grid-template-rows: 100vh min-content;
     background-color: var(--bg-100);
-    overflow-x: hidden;
 }
 
-.main{
+.main, .nav-wrapper{
     grid-column: center-start/center-end;
+    position: relative;
 }
