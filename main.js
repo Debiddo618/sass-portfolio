@@ -47,7 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleBtn.innerHTML = '<ion-icon name="close-outline"></ion-icon>';
     } else {
       toggleBtn.innerHTML = '<ion-icon name="menu-outline"></ion-icon>';
-    }  };
+    }  
+  };
 
   toggleBtn.addEventListener("click", handleToggle);
 

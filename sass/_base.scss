@@ -192,6 +192,7 @@ html{
 .main{
     grid-column: center-start/center-end;
     position: relative;
+    overflow: hidden;
 
     @media only screen and (max-width:$bp-large){
         grid-column: full-start/full-end;
