@@ -32,12 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
   const links = document.querySelectorAll(".nav__link");
+  const logoBtn = document.querySelector('.nav__logo');
   const scrollThreshold = 100;
 
   links.forEach((link) => {
     link.addEventListener("click", function (event) {
       nav.classList.remove("nav--visible");
+      toggleBtn.innerHTML = '<ion-icon name="menu-outline"></ion-icon>';
     });
+  });
+
+  logoBtn.addEventListener("click", function (event) {
+    nav.classList.remove("nav--visible");
+    toggleBtn.innerHTML = '<ion-icon name="menu-outline"></ion-icon>';
   });
 
   // toggle navbar
