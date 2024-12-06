@@ -535,7 +535,7 @@ html {
 }
 @media only screen and (max-width: 50em) {
   .game-card {
-    width: 80vw;
+    width: 40rem;
   }
 }
 .game-card__image {
@@ -558,6 +558,11 @@ html {
   color: var(--text-100);
   margin-bottom: 1rem;
   height: 7rem;
+}
+@media only screen and (max-width: 50em) {
+  .game-card__description {
+    height: 10rem;
+  }
 }
 .game-card__link--demo {
   margin-right: 3rem;
