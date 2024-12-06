@@ -65,6 +65,9 @@
                 display: flex;
                 justify-content: space-evenly;
             }
+            @media only screen and (max-width:$bp-small){
+                justify-content: space-between;
+            }
         }
         &__socials__list{
             display: flex;
@@ -89,6 +92,9 @@
             align-items: center;
             gap: 2rem;
             margin-bottom: $mb-sm;
+            @media only screen and (max-width:$bp-small){
+                gap: 1rem;
+            }
         }
 
         &__icon{
@@ -109,11 +115,18 @@
             font-size: $font-default;
             font-weight: 500;
             margin-bottom: 1rem;
+            @media only screen and (max-width:$bp-small){
+                font-size: $font-sm;
+                font-weight: 900;
+            }
         }
 
         &-info{
             font-size: $font-sm;
             font-weight: 500;
+            @media only screen and (max-width:$bp-small){
+                font-size: 1.5rem;
+            }
         }
     }
 }

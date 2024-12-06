@@ -318,6 +318,7 @@ html {
 @media only screen and (max-width: 50em) {
   .nav-toggle {
     display: flex;
+    padding: 1.5rem;
   }
 }
 .nav__logo {
@@ -961,6 +962,11 @@ html {
     justify-content: space-evenly;
   }
 }
+@media only screen and (max-width: 50em) {
+  .contact__details__info {
+    justify-content: space-between;
+  }
+}
 .contact__details__socials__list {
   display: flex;
   text-decoration: none;
@@ -986,6 +992,11 @@ html {
   gap: 2rem;
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 50em) {
+  .contact__details--freelance, .contact__details--email, .contact__details--residence {
+    gap: 1rem;
+  }
+}
 .contact__details__icon {
   width: 5rem;
   height: 5rem;
@@ -1003,9 +1014,20 @@ html {
   font-weight: 500;
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 50em) {
+  .contact__details-title {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+}
 .contact__details-info {
   font-size: 2rem;
   font-weight: 500;
+}
+@media only screen and (max-width: 50em) {
+  .contact__details-info {
+    font-size: 1.5rem;
+  }
 }
 
 .form-group {
