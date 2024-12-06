@@ -299,8 +299,8 @@ html {
 }
 .nav-toggle {
   position: fixed;
-  top: 5rem;
-  right: 5rem;
+  top: 3rem;
+  right: 3rem;
   background-color: var(--accent-200);
   z-index: 2000;
   border-radius: 50%;
@@ -601,7 +601,10 @@ html {
 @media only screen and (max-width: 50em) {
   .project-card {
     width: 75%;
+    height: 55vw;
     align-self: center;
+    margin-bottom: 1rem;
+    padding: 3rem;
   }
 }
 .project-card--inner {
@@ -615,7 +618,7 @@ html {
 }
 @media only screen and (max-width: 50em) {
   .project-card--inner {
-    height: 50rem;
+    height: 100%;
   }
 }
 .project-card--face1, .project-card--face2 {
