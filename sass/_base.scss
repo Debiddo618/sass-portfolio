@@ -39,7 +39,6 @@ $text-color-light:#fff;
     --bg-200: #{$bg-200-light};
     --bg-300: #{$bg-300-light};
     --text-color: #{$text-color-dark};
-    --neon-light: "";
     --bg-color:#{$bg-light};
 }
 
@@ -88,7 +87,7 @@ body.dark-theme {
         }
     }
 
-    .header__image, .about__image, .contact__details__icon,.nav,.btn{
+    .header__image, .about__image, .contact__details__icon,.nav,.btn, .nav__logo__image{
         box-shadow: 0 4px 30px rgba(#374357, 0.1),0 4px 30px rgba(#374357, 0.5), 0 4px 30px rgba(#374357, 0.5);
     }
 

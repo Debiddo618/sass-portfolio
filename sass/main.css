@@ -25,7 +25,6 @@
   --bg-200: #f5f4f1;
   --bg-300: #fff;
   --text-color: #000;
-  --neon-light: "";
   --bg-color:#00668c;
 }
 
@@ -66,7 +65,7 @@ body.dark-theme .header-background:before {
   background-image: linear-gradient(to bottom, #0a1727, var(--bg-100));
   margin-bottom: 1rem;
 }
-body.dark-theme .header__image, body.dark-theme .about__image, body.dark-theme .contact__details__icon, body.dark-theme .nav, body.dark-theme .btn {
+body.dark-theme .header__image, body.dark-theme .about__image, body.dark-theme .contact__details__icon, body.dark-theme .nav, body.dark-theme .btn, body.dark-theme .nav__logo__image {
   box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
 }
 body.dark-theme .experience__image {
@@ -327,8 +326,8 @@ html {
 @media only screen and (max-width: 50em) {
   .nav__logo {
     grid-column: auto;
-    background-color: white;
     width: 100%;
+    border-radius: 50%;
     height: 15rem;
   }
 }
@@ -343,7 +342,10 @@ html {
 }
 @media only screen and (max-width: 50em) {
   .nav__logo__image {
-    width: 15rem;
+    width: 17rem;
+    height: 17rem;
+    background-color: white;
+    border-radius: 50%;
   }
 }
 .nav__links {
