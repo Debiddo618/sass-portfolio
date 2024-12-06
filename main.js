@@ -29,8 +29,27 @@ function createSkillSlider(skillsData, containerSelector) {
 document.addEventListener("DOMContentLoaded", () => {
   // Navbar
   const sections = document.querySelectorAll("section");
+  const toggleBtn = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
+  const links = document.querySelectorAll(".nav__link");
   const scrollThreshold = 100;
+
+  links.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      nav.classList.remove("nav--visible");
+    });
+  });
+
+  // toggle navbar
+  const handleToggle = () => {
+    nav.classList.toggle("nav--visible");
+    if (nav.classList.contains("nav--visible")) {
+      toggleBtn.innerHTML = '<ion-icon name="close-outline"></ion-icon>';
+    } else {
+      toggleBtn.innerHTML = '<ion-icon name="menu-outline"></ion-icon>';
+    }  };
+
+  toggleBtn.addEventListener("click", handleToggle);
 
   const observerOptions = {
     root: null,
@@ -45,8 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
       nav.classList.remove("scrolled");
     }
   });
-
-  const links = document.querySelectorAll(".nav__link");
 
   const observerCallback = (entries, observer) => {
     entries.forEach((entry) => {
