@@ -65,8 +65,13 @@ body.dark-theme .header-background:before {
   background-image: linear-gradient(to bottom, #0a1727, var(--bg-100));
   margin-bottom: 1rem;
 }
-body.dark-theme .header__image, body.dark-theme .about__image, body.dark-theme .contact__details__icon, body.dark-theme .nav, body.dark-theme .btn, body.dark-theme .nav__logo__image {
+body.dark-theme .header__image, body.dark-theme .about__image, body.dark-theme .contact__details__icon, body.dark-theme .nav, body.dark-theme .btn {
   box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
+}
+@media only screen and (max-width: 50em) {
+  body.dark-theme .nav__logo__image {
+    box-shadow: 0 4px 30px rgba(55, 67, 87, 0.1), 0 4px 30px rgba(55, 67, 87, 0.5), 0 4px 30px rgba(55, 67, 87, 0.5);
+  }
 }
 body.dark-theme .experience__image {
   background-color: var(--bg-300);

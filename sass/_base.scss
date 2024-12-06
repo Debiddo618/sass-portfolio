@@ -87,8 +87,15 @@ body.dark-theme {
         }
     }
 
-    .header__image, .about__image, .contact__details__icon,.nav,.btn, .nav__logo__image{
+    .header__image, .about__image, .contact__details__icon,.nav,.btn{
         box-shadow: 0 4px 30px rgba(#374357, 0.1),0 4px 30px rgba(#374357, 0.5), 0 4px 30px rgba(#374357, 0.5);
+
+    }
+
+    .nav__logo__image{
+        @media only screen and (max-width:$bp-small){
+            box-shadow: 0 4px 30px rgba(#374357, 0.1),0 4px 30px rgba(#374357, 0.5), 0 4px 30px rgba(#374357, 0.5);
+        }
     }
 
     // experience
