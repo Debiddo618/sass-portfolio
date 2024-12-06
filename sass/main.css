@@ -526,6 +526,11 @@ html {
   height: 100%;
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 50em) {
+  .game-card {
+    width: 80vw;
+  }
+}
 .game-card__image {
   display: block;
   width: 100%;

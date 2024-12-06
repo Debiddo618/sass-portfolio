@@ -32,6 +32,10 @@
     height: 100%;
     margin-bottom: $mb-sm;
 
+    @media only screen and (max-width:$bp-small){
+        width: 80vw;
+    }
+
     &__image{
         display: block;
         width: 100%;
