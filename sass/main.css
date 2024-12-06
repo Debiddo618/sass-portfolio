@@ -598,6 +598,11 @@ html {
   margin-bottom: 2.5rem;
   text-align: center;
 }
+@media only screen and (max-width: 50em) {
+  .project__grid__title {
+    text-align: start;
+  }
+}
 .project__grid--web {
   grid-row: 1/-1;
   display: grid;
@@ -618,7 +623,7 @@ html {
 }
 @media only screen and (max-width: 50em) {
   .project-card {
-    width: 75%;
+    width: 100%;
     height: 55vw;
     align-self: center;
     margin-bottom: 1rem;
