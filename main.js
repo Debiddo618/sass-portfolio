@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav");
   const links = document.querySelectorAll(".nav__link");
   const logoBtn = document.querySelector('.nav__logo');
+  const ctaBtn = document.querySelector('.nav__cta');
   const scrollThreshold = 100;
 
   links.forEach((link) => {
@@ -43,6 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   logoBtn.addEventListener("click", function (event) {
+    nav.classList.remove("nav--visible");
+    toggleBtn.innerHTML = '<ion-icon name="menu-outline"></ion-icon>';
+  });
+
+  ctaBtn.addEventListener("click", function (event) {
     nav.classList.remove("nav--visible");
     toggleBtn.innerHTML = '<ion-icon name="menu-outline"></ion-icon>';
   });
