@@ -1061,7 +1061,7 @@ html {
 }
 
 .result {
-  color: var(--text-100);
+  color: #fff;
   font-size: 2rem;
   margin-top: 1rem;
 }
