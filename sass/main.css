@@ -500,6 +500,11 @@ html {
   font-weight: 500;
   margin-bottom: 4.5rem;
 }
+@media only screen and (max-width: 50em) {
+  .about-details-resume {
+    margin-bottom: 2.5rem;
+  }
+}
 
 .games {
   display: grid;
@@ -746,6 +751,11 @@ html {
   line-height: 1.25;
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 31.25em) {
+  .sass__project__description {
+    width: 50%;
+  }
+}
 .sass__project__links {
   display: flex;
 }
@@ -755,6 +765,17 @@ html {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .sass__project__links {
+    padding: 1rem;
+  }
+  .sass__project__links a:first-of-type {
+    margin-right: 1rem;
+  }
+  .sass__project__links a {
+    font-size: 2rem;
   }
 }
 

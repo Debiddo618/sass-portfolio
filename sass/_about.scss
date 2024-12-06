@@ -51,6 +51,11 @@
             font-weight: 500;
             margin-bottom: $mb-lg;
         }
+        &-resume{
+            @media only screen and (max-width:$bp-small){
+                margin-bottom: $mb-md;
+            }
+        }
     }
 }
 

@@ -192,6 +192,7 @@
         width: 75%;
         position: relative;
       }
+      
     }
 
     &__title{
@@ -201,6 +202,9 @@
       font-size: $font-sm;
       line-height: 1.25;
       margin-bottom: $mb-sm;
+      @media only screen and (max-width:$bp-smallest){
+        width: 50%;
+      }
         
     }
 
@@ -211,6 +215,15 @@
         top: 50%;
         right: 0;
         transform: translateY(-50%);
+      }
+      @media only screen and (max-width:$bp-smallest){
+        padding: 1rem;
+        a:first-of-type {
+          margin-right: 1rem;
+        }
+        a{
+          font-size: $font-sm;
+        }
       }
     }
 }
