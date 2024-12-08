@@ -469,6 +469,7 @@ html {
 .about__pictures {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .about__image {
   z-index: 1;
