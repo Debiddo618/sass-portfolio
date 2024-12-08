@@ -1089,9 +1089,6 @@ html {
   }
 }
 
-.experience {
-  color: var(--text-color);
-}
 .experience__image {
   width: 5rem;
   height: 5rem;
