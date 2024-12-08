@@ -198,6 +198,9 @@ html {
   position: relative;
   z-index: 1;
 }
+.header__intro--text {
+  color: var(--accent-200);
+}
 .header__intro--start {
   font-size: 3rem;
   margin-bottom: 1rem;

@@ -52,6 +52,10 @@
         position: relative;
         z-index: 1;
 
+        &--text{
+            color: var(--accent-200);
+        }
+
         &--start{
             font-size: $font-default;
             margin-bottom: $mb-sm;
