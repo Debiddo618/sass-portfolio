@@ -747,6 +747,9 @@ html {
   display: block;
   width: 100%;
   border-radius: 1rem;
+  min-height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media only screen and (max-width: 50em) {
   .sass__project__details {
