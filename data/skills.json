@@ -4,6 +4,10 @@
     "imageSrc": "skills/javascript.png"
   },
   {
+    "title": "TypeScript",
+    "imageSrc": "skills/typescript.png"
+  },
+  {
     "title": "HTML",
     "imageSrc": "skills/html.png"
   },
@@ -60,11 +64,23 @@
     "imageSrc": "skills/mui.png"
   },
   {
+    "title": "TailwindCSS",
+    "imageSrc": "skills/tailwind.png"
+  },
+  {
     "title": "Flask",
     "imageSrc": "skills/flask.png"
   },
   {
     "title": "Sass",
     "imageSrc": "skills/sass.png"
+  },
+  {
+    "title": "Docker",
+    "imageSrc": "skills/docker.png"
+  },
+  {
+    "title": "Jenkins",
+    "imageSrc": "skills/jenkins.png"
   }
 ]

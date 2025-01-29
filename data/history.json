@@ -1,5 +1,16 @@
 [
   {
+    "role": "Fullstack Java Developer",
+    "organization": "Revature",
+    "startDate": "Nov, 2024",
+    "endDate": "Current",
+    "experiences": [
+      "Developed a full-stack employee reimbursement system with TypeScript/React frontend and Java/Spring Boot backend, streamlining request submission, review, and processing",
+      "Developed a responsive hotel management frontend with TypeScript, React, Tailwind CSS, and ShadCN, integrating backend APIs for booking and reviews"
+    ],
+    "imageSrc": "history/revature.jpeg"
+  },
+  {
     "role": "Software Engineering Bootcamp",
     "organization": "General Assembly",
     "startDate": "Apr, 2024",
