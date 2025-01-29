@@ -1,5 +1,23 @@
 [
   {
+    "title": "CheckInn",
+    "imageSrc": "projects/checkInn.png",
+    "description": "A hotel application that lets users browse hotels, book rooms, and submit reviews for a seamless booking and feedback experience",
+    "skills": [
+      "TypeScript",
+      "React",
+      "Java",
+      "Spring Boot",
+      "TailWind",
+      "Docker",
+      "Jenkins",
+      "AWS",
+      "PostgreSQL"
+    ],
+    "demo": "",
+    "source": "https://github.com/Training-241209/hotel-booking-front-end"
+  },
+  {
     "title": "Job Tracker",
     "imageSrc": "projects/jobtracker.png",
     "description": "A job application tracker created using React and Flask",

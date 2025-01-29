@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
   const links = document.querySelectorAll(".nav__link");
-  const logoBtn = document.querySelector('.nav__logo');
-  const ctaBtn = document.querySelector('.nav__cta');
+  const logoBtn = document.querySelector(".nav__logo");
+  const ctaBtn = document.querySelector(".nav__cta");
   const scrollThreshold = 100;
 
   links.forEach((link) => {
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleBtn.innerHTML = '<ion-icon name="close-outline"></ion-icon>';
     } else {
       toggleBtn.innerHTML = '<ion-icon name="menu-outline"></ion-icon>';
-    }  
+    }
   };
 
   toggleBtn.addEventListener("click", handleToggle);
@@ -173,7 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
     projectCard.classList.add("project-card");
 
     projectCard.innerHTML = `
-
     <div class="project-card--inner">
       <div class="project-card--face1">
         <img src="${getImageUrl(project.imageSrc)}" alt="${
@@ -190,9 +189,11 @@ document.addEventListener("DOMContentLoaded", () => {
             .join("")}
         </ul>
         <div class="project-card__links">
-          <a href="${
+          ${
             project.demo
-          }" target="_blank" class="project-card__link--demo btn">Live</a>
+              ? `<a href="${project.demo}" target="_blank" class="project-card__link--demo btn">Live</a>`
+              : ""
+          }
           <a href="${
             project.source
           }" target="_blank" class="project-card__link--source btn">Source</a>
