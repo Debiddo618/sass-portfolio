@@ -254,7 +254,8 @@
       // All image screenshots must be 440x870
       &__image {
         display: block;
-        height: 75rem;
+        height: 80rem;
+        max-width: 44rem;
         position: relative;
         margin: 0 auto;
       }
