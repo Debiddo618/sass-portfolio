@@ -8,11 +8,9 @@
       "React",
       "Java",
       "Spring Boot",
-      "TailWind",
+      "Tailwind",
       "Docker",
-      "Jenkins",
-      "AWS",
-      "PostgreSQL"
+      "Jenkins"
     ],
     "demo": "",
     "source": "https://github.com/Training-241209/hotel-booking-front-end"

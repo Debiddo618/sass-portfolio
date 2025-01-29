@@ -811,7 +811,6 @@ html {
 .mobile__projects__slide__image {
   display: block;
   height: 80rem;
-  max-width: 44rem;
   position: relative;
   margin: 0 auto;
 }
