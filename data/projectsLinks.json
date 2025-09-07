@@ -27,48 +27,31 @@
       "PostgreSQL",
       "React"
     ],
-    "demo": "",
+    "demo": "https://job-tracker-react-flask.netlify.app/",
     "source": "https://github.com/Debiddo618/job-tracker"
   },
   {
     "title": "Kong's Market",
     "imageSrc": "projects/kong.png",
     "description": "An e-commerce website developed using Django and BootStrap.",
-    "skills": [
-      "JavaScript",
-      "Python",
-      "Django",
-      "BootStrap",
-      "PostgreSQL"
-    ],
-    "demo": "",
+    "skills": ["JavaScript", "Python", "Django", "BootStrap", "PostgreSQL"],
+    "demo": "https://kong-market-5f9a6bf5752f.herokuapp.com/",
     "source": "https://github.com/Debiddo618/purple-gorilla-marketplace?tab=readme-ov-file"
   },
   {
     "title": "BuzzPage",
     "imageSrc": "projects/buzzpage.png",
     "description": "A mini social media app that keeps you up on all the latest Buzz!",
-    "skills": [
-      "MERN",
-      "Amazon S3",
-      "BootStrap",
-      "JWT Token Auth"
-    ],
-    "demo": "",
+    "skills": ["MERN", "Amazon S3", "BootStrap", "JWT Token Auth"],
+    "demo": "https://buzzpagev2-a5e89272eb02.herokuapp.com/",
     "source": "https://github.com/Debiddo618/BuzzPage_V2"
   },
   {
     "title": "InventoryPro",
     "imageSrc": "projects/inventorypro.png",
     "description": "Inventory management web app enabling users to CRUD products.",
-    "skills": [
-      "MongoDB",
-      "Express",
-      "Node",
-      "JavaScript",
-      "HTML & CSS"
-    ],
-    "demo": "",
+    "skills": ["MongoDB", "Express", "Node", "JavaScript", "HTML & CSS"],
+    "demo": "https://inventorypro-fb27c3245e68.herokuapp.com/",
     "source": "https://github.com/Debiddo618/inventory-tracker"
   }
 ]
