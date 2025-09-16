@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // projects grid
   const projectGridWeb = document.querySelector(".project__grid--web");
-  projectsData.forEach((project, index) => {
+  projectsData.forEach((project) => {
     const projectCard = document.createElement("div");
     projectCard.classList.add("project-card");
 
@@ -189,11 +189,18 @@ document.addEventListener("DOMContentLoaded", () => {
             .join("")}
         </ul>
         <div class="project-card__links">
-          ${
-            project.demo
-              ? `<a href="${project.demo}" target="_blank" class="project-card__link--demo btn">Live</a>`
-              : ""
-          }
+          <a 
+            href="${project.demo}" 
+            target="_blank" 
+            class="project-card__link--demo btn" 
+            ${
+              !project.live
+                ? "onclick='return false;' style='pointer-events: none; opacity: 0.5;'"
+                : ""
+            }
+          >
+            Live
+          </a>
           <a href="${
             project.source
           }" target="_blank" class="project-card__link--source btn">Source</a>
@@ -201,6 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
   `;
+
     projectGridWeb.appendChild(projectCard);
   });
 
