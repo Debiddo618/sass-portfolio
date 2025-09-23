@@ -30,7 +30,7 @@
     ],
     "demo": "https://job-tracker-react-flask.netlify.app/",
     "source": "https://github.com/Debiddo618/job-tracker",
-    "live": true
+    "live": false
   },
   {
     "title": "Kong's Market",
@@ -48,7 +48,7 @@
     "skills": ["MERN", "Amazon S3", "BootStrap", "JWT Token Auth"],
     "demo": "https://buzzpagev2-a5e89272eb02.herokuapp.com/",
     "source": "https://github.com/Debiddo618/BuzzPage_V2",
-    "live": true
+    "live": false
   },
   {
     "title": "InventoryPro",
@@ -57,6 +57,6 @@
     "skills": ["MongoDB", "Express", "Node", "JavaScript", "HTML & CSS"],
     "demo": "https://inventorypro-fb27c3245e68.herokuapp.com/",
     "source": "https://github.com/Debiddo618/inventory-tracker",
-    "live": true
+    "live": false
   }
 ]
