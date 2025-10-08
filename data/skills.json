@@ -82,5 +82,13 @@
   {
     "title": "Jenkins",
     "imageSrc": "skills/jenkins.png"
+  }, 
+  {
+    "title": "AWS",
+    "imageSrc": "skills/aws.png"
+  },
+  {
+    "title": "ThreeJS",
+    "imageSrc": "skills/threejs.png"
   }
 ]
