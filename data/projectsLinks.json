@@ -12,9 +12,8 @@
       "Docker",
       "Jenkins"
     ],
-    "demo": "false",
-    "source": "https://github.com/Training-241209/hotel-booking-front-end",
-    "live": false
+    "demo": "",
+    "source": "https://github.com/Training-241209/hotel-booking-front-end"
   },
   {
     "title": "Job Tracker",
@@ -29,8 +28,7 @@
       "React"
     ],
     "demo": "https://job-tracker-react-flask.netlify.app/",
-    "source": "https://github.com/Debiddo618/job-tracker",
-    "live": false
+    "source": "https://github.com/Debiddo618/job-tracker"
   },
   {
     "title": "Kong's Market",
@@ -38,8 +36,7 @@
     "description": "An e-commerce website developed using Django and BootStrap.",
     "skills": ["JavaScript", "Python", "Django", "BootStrap", "PostgreSQL"],
     "demo": "https://kong-market-5f9a6bf5752f.herokuapp.com/",
-    "source": "https://github.com/Debiddo618/purple-gorilla-marketplace?tab=readme-ov-file",
-    "live": false
+    "source": "https://github.com/Debiddo618/purple-gorilla-marketplace?tab=readme-ov-file"
   },
   {
     "title": "BuzzPage",
@@ -47,8 +44,7 @@
     "description": "A mini social media app that keeps you up on all the latest Buzz!",
     "skills": ["MERN", "Amazon S3", "BootStrap", "JWT Token Auth"],
     "demo": "https://buzzpagev2-a5e89272eb02.herokuapp.com/",
-    "source": "https://github.com/Debiddo618/BuzzPage_V2",
-    "live": false
+    "source": "https://github.com/Debiddo618/BuzzPage_V2"
   },
   {
     "title": "InventoryPro",
@@ -56,7 +52,6 @@
     "description": "Inventory management web app enabling users to CRUD products.",
     "skills": ["MongoDB", "Express", "Node", "JavaScript", "HTML & CSS"],
     "demo": "https://inventorypro-fb27c3245e68.herokuapp.com/",
-    "source": "https://github.com/Debiddo618/inventory-tracker",
-    "live": false
+    "source": "https://github.com/Debiddo618/inventory-tracker"
   }
 ]
