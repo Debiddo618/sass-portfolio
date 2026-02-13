@@ -1,23 +1,15 @@
 [
   {
     "role": "Software Associate",
-    "organization": "Infosys",
-    "startDate": "Mar, 2025",
-    "endDate": "Present",
-    "experiences": [
-    ],
-    "imageSrc": "history/infosys.jpg"
-  },
-  {
-    "role": "Fullstack Java Developer",
-    "organization": "Revature",
+    "organization": "Infosys (via Revature)",
     "startDate": "Nov, 2024",
-    "endDate": "Mar, 2025",
+    "endDate": "Feb, 2026",
     "experiences": [
+      "Debugged and resolved frontend and backend issues, improving application stability and performance",
       "Developed a full-stack employee reimbursement system with TypeScript/React frontend and Java/Spring Boot backend, streamlining request submission, review, and processing",
       "Developed a responsive hotel management frontend with TypeScript, React, Tailwind CSS, and ShadCN, integrating backend APIs for booking and reviews"
     ],
-    "imageSrc": "history/revature.jpeg"
+    "imageSrc": "history/infosys.jpg"
   },
   {
     "role": "Software Engineering Bootcamp",
