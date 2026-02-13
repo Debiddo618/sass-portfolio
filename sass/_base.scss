@@ -1,17 +1,16 @@
 // dark theme
-$primary-100-dark: #1F3A5F;
+$primary-100-dark: #1f3a5f;
 $primary-200-dark: #4d648d;
 $primary-300-dark: #acc2ef;
-$accent-100-dark: #3D5A80;
+$accent-100-dark: #3d5a80;
 $accent-200-dark: #43b7ff;
-$text-100-dark: #FFFFFF;
+$text-100-dark: #ffffff;
 $text-200-dark: #e0e0e0;
 $bg-dark: #0a1727;
-$bg-100-dark: #0F1C2E;
+$bg-100-dark: #0f1c2e;
 $bg-200-dark: #1f2b3e;
 $bg-300-dark: #374357;
-$text-color-dark:#000;
-
+$text-color-dark: #000;
 
 // light theme
 $primary-100-light: #d4eaf7;
@@ -21,25 +20,25 @@ $accent-100-light: #71c4ef;
 $accent-200-light: #00668c;
 $text-100-light: #1d1c1c;
 $text-200-light: #313d44;
-$bg-light:#00668c;
+$bg-light: #00668c;
 $bg-100-light: #fffefb;
 $bg-200-light: #f5f4f1;
-$bg-300-light: #fff;  
-$text-color-light:#fff;
+$bg-300-light: #fff;
+$text-color-light: #fff;
 
-:root{
-    --primary-100: #{$primary-100-light};
-    --primary-200: #{$primary-200-light};
-    --primary-300: #{$primary-300-light};
-    --accent-100: #{$accent-100-light};
-    --accent-200: #{$accent-200-light};
-    --text-100: #{$text-100-light};
-    --text-200: #{$text-200-light};
-    --bg-100: #{$bg-100-light};
-    --bg-200: #{$bg-200-light};
-    --bg-300: #{$bg-300-light};
-    --text-color: #{$text-color-dark};
-    --bg-color:#{$bg-light};
+:root {
+  --primary-100: #{$primary-100-light};
+  --primary-200: #{$primary-200-light};
+  --primary-300: #{$primary-300-light};
+  --accent-100: #{$accent-100-light};
+  --accent-200: #{$accent-200-light};
+  --text-100: #{$text-100-light};
+  --text-200: #{$text-200-light};
+  --bg-100: #{$bg-100-light};
+  --bg-200: #{$bg-200-light};
+  --bg-300: #{$bg-300-light};
+  --text-color: #{$text-color-dark};
+  --bg-color: #{$bg-light};
 }
 
 // breakpoints
@@ -51,158 +50,169 @@ $bp-smallest: 31.25em; //500px
 
 // dark theme
 body.dark-theme {
-    --primary-100: #{$primary-100-dark};
-    --primary-200: #{$primary-200-dark};
-    --primary-300: #{$primary-300-dark};
-    --accent-100: #{$accent-100-dark};
-    --accent-200: #{$accent-200-dark};
-    --text-100: #{$text-100-dark};
-    --text-200: #{$text-200-dark};
-    --bg-100: #{$bg-100-dark};
-    --bg-200: #{$bg-200-dark};
-    --bg-300: #{$bg-300-dark};
-    --text-color: #{$text-color-light};
-    --bg-color:#{$bg-dark};
-    
-    .header-background{
-        width: 100%;
-        height: 100%;
-        grid-column: 1/-1;
-        grid-row: 1/2;
-        background-image: linear-gradient(to right, rgba(#0F1C2E, .7), rgba(#0F1C2E, .7)), url('../img/trees.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        position: relative;
-        background-color: transparent;
-        clip-path:none;
-    
-        &:before{
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 50%;
-            top: 100%;
-            background-image: linear-gradient(to bottom,#0a1727,var(--bg-100));
-            margin-bottom: $mb-sm;
-        }
+  --primary-100: #{$primary-100-dark};
+  --primary-200: #{$primary-200-dark};
+  --primary-300: #{$primary-300-dark};
+  --accent-100: #{$accent-100-dark};
+  --accent-200: #{$accent-200-dark};
+  --text-100: #{$text-100-dark};
+  --text-200: #{$text-200-dark};
+  --bg-100: #{$bg-100-dark};
+  --bg-200: #{$bg-200-dark};
+  --bg-300: #{$bg-300-dark};
+  --text-color: #{$text-color-light};
+  --bg-color: #{$bg-dark};
+
+  .header-background {
+    width: 100%;
+    height: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    background-image: linear-gradient(
+        to right,
+        rgba(#0f1c2e, 0.7),
+        rgba(#0f1c2e, 0.7)
+      ),
+      url("../img/wave.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    background-color: transparent;
+    clip-path: none;
+
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 50%;
+    //   top: 100%;
+    //   background-image: linear-gradient(to bottom, #0a1727, var(--bg-100));
+    //   margin-bottom: $mb-sm;
+    // }
+  }
+
+  .header__image,
+  .about__image,
+  .contact__details__icon,
+  .nav,
+  .btn {
+    box-shadow: 0 4px 30px rgba(#374357, 0.1), 0 4px 30px rgba(#374357, 0.5),
+      0 4px 30px rgba(#374357, 0.5);
+  }
+
+  .nav__logo__image {
+    @media only screen and (max-width: $bp-small) {
+      box-shadow: 0 4px 30px rgba(#374357, 0.1), 0 4px 30px rgba(#374357, 0.5),
+        0 4px 30px rgba(#374357, 0.5);
+    }
+  }
+
+  // experience
+  .experience {
+    &__image {
+      background-color: var(--bg-300);
     }
 
-    .header__image, .about__image, .contact__details__icon,.nav,.btn{
-        box-shadow: 0 4px 30px rgba(#374357, 0.1),0 4px 30px rgba(#374357, 0.5), 0 4px 30px rgba(#374357, 0.5);
-
+    &__timeline {
+      &::after {
+        background-color: var(--bg-300);
+      }
     }
 
-    .nav__logo__image{
-        @media only screen and (max-width:$bp-small){
-            box-shadow: 0 4px 30px rgba(#374357, 0.1),0 4px 30px rgba(#374357, 0.5), 0 4px 30px rgba(#374357, 0.5);
-        }
+    &__text-box {
+      background: var(--bg-300);
     }
 
-    // experience
-    .experience{
-        &__image{
-            background-color: var(--bg-300);
-        }
-
-        &__timeline{
-            &::after{
-                background-color: var(--bg-300);
-            }
-        }
-
-        &__text-box{
-            background: var(--bg-300);
-        }
-
-        &__left-container-arrow{
-            border-left: 1.5rem solid var(--bg-300);
-        }
-        &__right-container-arrow{
-            border-right: 1.5rem solid var(--bg-300);
-        }
+    &__left-container-arrow {
+      border-left: 1.5rem solid var(--bg-300);
     }
-
-    // projects
-
-
-    // contact
-    .contact{
-
+    &__right-container-arrow {
+      border-right: 1.5rem solid var(--bg-300);
     }
+  }
 
-    .form-group{
-        label{
-            color: var(--text-color);
-        }
+  // projects
+
+  // contact
+  .contact {
+  }
+
+  .form-group {
+    label {
+      color: var(--text-color);
     }
+  }
 
-    //footer
-    .footer{
-        color: var(--text-color);
-        background-color: var(--bg-color);
-    }
+  //footer
+  .footer {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
 
-    // buttons
-    .btn {
-        background-color: #fff;
-        color: #000;
-    }
+  // buttons
+  .btn {
+    background-color: #fff;
+    color: #000;
+  }
 
-    .btn a{
-        color: #000;
-    }
-
+  .btn a {
+    color: #000;
+  }
 }
 
 // grid
 $grid-gap: 3rem;
 
-*,*::before,*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-html{
-    box-sizing: border-box;
-    font-size: 62.5%; // 1rem = 16px
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 16px
 
-    @media only screen and (max-width:$bp-largest){
-        font-size: 50%;
-    }
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
 
-    @media only screen and (max-width:$bp-medium){
-        font-size: 37.5%;
-    }
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 37.5%;
+  }
 }
 
-.container{
-    position: relative;
-    display: grid;
-    grid-template-columns: [full-start] 1fr [center-start] repeat(10, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 1fr [full-end];
-    grid-template-rows: 100vh min-content;
-    background-color: var(--bg-100);
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns:
+    [full-start] 1fr [center-start] repeat(
+      10,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] 1fr [full-end];
+  grid-template-rows: 100vh min-content;
+  background-color: var(--bg-100);
 
-
-    @media only screen and (max-width:$bp-small){
-        grid-template-rows: minmax(75vh,1fr) min-content;
-
-    }
-    
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows: minmax(75vh, 1fr) min-content;
+  }
 }
 
-.main{
-    grid-column: center-start/center-end;
-    position: relative;
-    overflow: hidden;
+.main {
+  grid-column: center-start/center-end;
+  position: relative;
+  overflow: hidden;
 
-    @media only screen and (max-width:$bp-large){
-        grid-column: full-start/full-end;
-        padding: 3rem;
-    }
+  @media only screen and (max-width: $bp-large) {
+    grid-column: full-start/full-end;
+    padding: 3rem;
+  }
 }
